@@ -1,34 +1,34 @@
 import { SideNavItem } from "../types/sidebarType";
 
-import { FolderIcon, CodeIcon, GlobeAltIcon } from "@heroicons/react/solid";
-import TSIcon from "../assets/icons/TSIcon.png";
-import JSIcon from "../assets/icons/JSIcon.png";
-import { Image } from "../components/Elements/Image";
+import { FolderIcon } from "@heroicons/react/solid";
+// import TSIcon from "../assets/icons/TSIcon.png";
+// import JSIcon from "../assets/icons/JSIcon.png";
+// import { Image } from "../components/Elements/Image";
 
-const WEB: {
-  title: string;
-  path?: string;
-  icon?: JSX.Element;
-}[] = [
-  {
-    title: "Dummy",
-    icon: (
-      <Image src={JSIcon} alt="JS Icon" className="bg-transparent w-7" lazy />
-    ),
-  },
-  {
-    title: "Dummy",
-    icon: (
-      <Image src={JSIcon} alt="JS Icon" className="bg-transparent w-7" lazy />
-    ),
-  },
-  {
-    title: "Dummy",
-    icon: (
-      <Image src={TSIcon} alt="TS Icon" className="bg-transparent w-7" lazy />
-    ),
-  },
-];
+// const WEB: {
+//   title: string;
+//   path?: string;
+//   icon?: JSX.Element;
+// }[] = [
+//   {
+//     title: "Dummy",
+//     icon: (
+//       <Image src={JSIcon} alt="JS Icon" className="bg-transparent w-7" lazy />
+//     ),
+//   },
+//   {
+//     title: "Dummy",
+//     icon: (
+//       <Image src={JSIcon} alt="JS Icon" className="bg-transparent w-7" lazy />
+//     ),
+//   },
+//   {
+//     title: "Dummy",
+//     icon: (
+//       <Image src={TSIcon} alt="TS Icon" className="bg-transparent w-7" lazy />
+//     ),
+//   },
+// ];
 
 export const SIDENAV_ITEMS: SideNavItem[] = [
   {

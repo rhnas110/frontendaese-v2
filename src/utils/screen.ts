@@ -13,7 +13,7 @@ function getWindowHeight() {
 }
 
 const width = getWindowWidth();
-const height = getWindowHeight();
+// const height = getWindowHeight();
 
 const MobileXs = width < 375 && width >= 0;
 const MobileSm = width < 480 && width >= 375;
