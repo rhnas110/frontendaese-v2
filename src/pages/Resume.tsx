@@ -34,7 +34,7 @@ const Resume = () => {
         </div>
         <div>
           <Link
-            to="https://frontendaese.netlify.app/resume?lang=id"
+            to="https://frontendaese.netlify.app/resume?lang=en"
             target="_blank"
             className="px-3 py-2 font-semibold transition duration-300 rounded text-background hover:bg-transparent hover:text-lightblue_vs bg-lightblue_vs hover:border hover:border-lightblue_vs"
           >
