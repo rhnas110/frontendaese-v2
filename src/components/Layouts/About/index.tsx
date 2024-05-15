@@ -1,6 +1,6 @@
 import { IdentificationIcon } from "@heroicons/react/solid";
-import List from "../components/List";
-import { skills } from "../constants/skills";
+import List from "../../List";
+import { skills } from "../../../constants/skills";
 
 const About = () => {
   return (

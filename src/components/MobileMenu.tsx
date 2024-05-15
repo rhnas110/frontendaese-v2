@@ -71,7 +71,7 @@ const MobileMenu = () => {
   const [showProjectsList, SetShowProjectsList] = useState(false);
 
   return (
-    <div className="w-full p-2">
+    <div className="w-full p-2 lg:hidden">
       <Disclosure>
         {({ open }) => (
           <>

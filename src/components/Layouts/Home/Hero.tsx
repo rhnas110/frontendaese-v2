@@ -2,10 +2,10 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { a11yDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import { Link } from "react-router-dom";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
-import JSIcon from "../assets/icons/JSIcon.png";
-import { Image } from "./Elements/Image";
-import { MobileXs } from "../utils/screen";
-function Header() {
+import JSIcon from "../../../assets/icons/JSIcon.png";
+import { Image } from "../../Elements/Image";
+import { MobileXs } from "../../../utils/screen";
+function Hero() {
   const codeString = `const profile = {
     name: "Raihan Arif Styawan",
     age: 20,
@@ -84,4 +84,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default Hero;
