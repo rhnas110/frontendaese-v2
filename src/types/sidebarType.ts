@@ -1,9 +1,8 @@
 export type SideNavItem = {
   title: string;
-  path?: string;
-  fn?: () => void;
-  isFn?: boolean;
+  url?: string;
   icon?: JSX.Element;
+  imageUrl?: { closed: string | undefined; open: string | undefined };
   submenu?: boolean;
   subMenuOpen?: boolean;
   subMenuItems?: SideNavItem[];

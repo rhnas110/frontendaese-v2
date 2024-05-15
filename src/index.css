@@ -31,3 +31,29 @@ body::-webkit-scrollbar-thumb {
         scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
     }
 }
+
+.tab-navbar-scrollbar::-webkit-scrollbar {
+    height: 5px;
+}
+
+.sidebar-scrollbar::-webkit-scrollbar {
+    width: 5px;
+}
+
+.tab-navbar-scrollbar::-webkit-scrollbar-thumb,
+.sidebar-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+}
+
+.tab-navbar-scrollbar::-webkit-scrollbar-track,
+.sidebar-scrollbar::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+}
+
+@supports not selector(::-webkit-scrollbar) {
+
+    .tab-navbar-scrollbar,
+    .sidebar-scrollbar {
+        scrollbar-color: theme(colors.green_vs) var(--sb-track-color);
+    }
+}

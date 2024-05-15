@@ -5,7 +5,7 @@ export const Image = ({
   className,
   lazy,
 }: {
-  src: string;
+  src?: string;
   alt?: string;
   className?: string;
   lazy?: boolean;

@@ -1,101 +1,93 @@
 import { SideNavItem } from "../types/sidebarType";
 
-import { FolderIcon } from "@heroicons/react/solid";
-// import TSIcon from "../assets/icons/TSIcon.png";
-// import JSIcon from "../assets/icons/JSIcon.png";
-// import { Image } from "../components/Elements/Image";
+import { GlobeAltIcon } from "@heroicons/react/solid";
 
-// const WEB: {
-//   title: string;
-//   path?: string;
-//   icon?: JSX.Element;
-// }[] = [
-//   {
-//     title: "Dummy",
-//     icon: (
-//       <Image src={JSIcon} alt="JS Icon" className="bg-transparent w-7" lazy />
-//     ),
-//   },
-//   {
-//     title: "Dummy",
-//     icon: (
-//       <Image src={JSIcon} alt="JS Icon" className="bg-transparent w-7" lazy />
-//     ),
-//   },
-//   {
-//     title: "Dummy",
-//     icon: (
-//       <Image src={TSIcon} alt="TS Icon" className="bg-transparent w-7" lazy />
-//     ),
-//   },
-// ];
+const WEB: {
+  title: string;
+  url?: string;
+}[] = [
+  {
+    title: "Project 1.js",
+    url: "#",
+  },
+  {
+    title: "Project 2.js",
+    url: "#",
+  },
+  {
+    title: "Project 3.ts",
+    url: "#",
+  },
+];
 
 export const SIDENAV_ITEMS: SideNavItem[] = [
   {
     title: "src",
     submenu: true,
-    icon: <FolderIcon className="w-5 text-yellow_vs" />,
+    imageUrl: {
+      open: "https://raw.githubusercontent.com/vscode-icons/vscode-icons/79c370141fe104b4bdc85a5c3d0e21f2a98b12d5/icons/folder_type_src_opened.svg",
+      closed:
+        "https://raw.githubusercontent.com/vscode-icons/vscode-icons/79c370141fe104b4bdc85a5c3d0e21f2a98b12d5/icons/folder_type_src.svg",
+    },
     subMenuItems: [
       {
-        title: "Coming Soon...",
+        title: "projects",
+        imageUrl: {
+          open: "https://raw.githubusercontent.com/vscode-icons/vscode-icons/79c370141fe104b4bdc85a5c3d0e21f2a98b12d5/icons/folder_type_view_opened.svg",
+          closed:
+            "https://raw.githubusercontent.com/vscode-icons/vscode-icons/79c370141fe104b4bdc85a5c3d0e21f2a98b12d5/icons/folder_type_view.svg",
+        },
+        submenu: true,
+        subMenuItems: [
+          {
+            title: "Web",
+            icon: <GlobeAltIcon className="w-5 text-blue_vs" />,
+            submenu: true,
+            subMenuItems: [...WEB],
+          },
+        ],
       },
-      // {
-      //   title: "Projects",
-      //   icon: <CodeIcon className="w-5 text-blue_vs" />,
-      //   submenu: true,
-      //   subMenuItems: [
-      //     {
-      //       title: "Web",
-      //       icon: <GlobeAltIcon className="w-5 text-blue_vs" />,
-      //       submenu: true,
-      //       subMenuItems: [...WEB],
-      //     },
-      //   ],
-      // },
-      // {
-      //   title: "Home.ts",
-      //   icon: (
-      //     <Image
-      //       src={TSIcon}
-      //       alt="TS Icon"
-      //       className="bg-transparent w-7"
-      //       lazy
-      //     />
-      //   ),
-      // },
-      // {
-      //   title: "About.ts",
-      //   icon: (
-      //     <Image
-      //       src={TSIcon}
-      //       alt="TS Icon"
-      //       className="bg-transparent w-7"
-      //       lazy
-      //     />
-      //   ),
-      // },
-      // {
-      //   title: "Resume.ts",
-      //   icon: (
-      //     <Image
-      //       src={TSIcon}
-      //       alt="TS Icon"
-      //       className="bg-transparent w-7"
-      //       lazy
-      //     />
-      //   ),
-      // },
-      // {
-      //   title: "Contact.ts",
-      //   icon: (
-      //     <Image
-      //       src={TSIcon}
-      //       alt="TS Icon"
-      //       className="bg-transparent w-7"
-      //       lazy
-      //     />
-      //   ),
-      // },
+      {
+        title: "pages",
+        imageUrl: {
+          open: "https://raw.githubusercontent.com/vscode-icons/vscode-icons/79c370141fe104b4bdc85a5c3d0e21f2a98b12d5/icons/folder_type_view_opened.svg",
+          closed:
+            "https://raw.githubusercontent.com/vscode-icons/vscode-icons/79c370141fe104b4bdc85a5c3d0e21f2a98b12d5/icons/folder_type_view.svg",
+        },
+        submenu: true,
+        subMenuItems: [
+          {
+            title: "Home.ts",
+          },
+          {
+            title: "About.ts",
+          },
+          {
+            title: "Resume.ts",
+          },
+          {
+            title: "Contact.ts",
+          },
+        ],
+      },
+      {
+        title: "App.ts",
+      },
+      {
+        title: "Welcome.ts",
+      },
+      {
+        title: "index.css",
+      },
+      {
+        title: "utils.js",
+      },
+      {
+        title: "data.json",
+      },
+      {
+        title: "README.md",
+      },
     ],
   },
 ];

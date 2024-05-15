@@ -12,7 +12,12 @@ import MailLogo from "../assets/logos/MailLogo.png";
 
 import { SideNavItem } from "../types/sidebarType";
 import { SIDENAV_ITEMS } from "../constants/sidebarItems";
+
 import { Image } from "./Elements/Image";
+
+import { cn } from "../utils";
+import { getFileIcon } from "../utils/fileIcon";
+import { useTabContext } from "../context/TabContext";
 
 const Sidebar = () => {
   const [sidebarItems, setSidebarItems] = useState(SIDENAV_ITEMS);
@@ -32,7 +37,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="flex h-full text-lg text-gray-400 bg-backgroundSecondary w-72">
+    <nav className="flex h-full text-lg text-gray-400 bg-backgroundSecondary w-72">
       <div className="relative w-full h-full">
         <div className="flex items-center justify-between px-2 bg-[#424242]">
           <h1 className="text-xl font-bold">frontendaese</h1>
@@ -48,7 +53,7 @@ const Sidebar = () => {
             </i>
           </div>
         </div>
-        <>
+        <div className="overflow-y-auto h-5/6 scroll-smooth sidebar-scrollbar">
           {sidebarItems.map((item, idx) => {
             return (
               <MenuItem
@@ -58,7 +63,7 @@ const Sidebar = () => {
               />
             );
           })}
-        </>
+        </div>
         <div className="absolute w-full bottom-6">
           <div className="flex items-center justify-between px-4">
             <Link to="https://github.com/rhnas110" target="_blank">
@@ -96,7 +101,7 @@ const Sidebar = () => {
           </div>
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 
@@ -109,6 +114,7 @@ const MenuItem = ({
   item: SideNavItem;
   collapseAllFolders: () => void;
 }) => {
+  const { addTab, activeTab } = useTabContext();
   const [subMenuOpen, setSubMenuOpen] = useState(item?.subMenuOpen || false);
   const toggleSubMenu = () => {
     setSubMenuOpen((prevState) => !prevState);
@@ -117,9 +123,18 @@ const MenuItem = ({
   useEffect(() => {
     setSubMenuOpen(item?.subMenuOpen || false);
   }, [item?.subMenuOpen]);
+  const icon = getFileIcon(item.title);
+  const title = item.title.toLowerCase()?.split(".")[0];
+
+  const handleItemClick = () => {
+    if (!item.submenu && !item.url) {
+      addTab({ id: title, title: item.title });
+    }
+  };
+  const isActive = activeTab === item.title.toLowerCase().split(".")[0];
 
   return (
-    <>
+    <div onClick={handleItemClick}>
       {item.submenu ? (
         <>
           <button
@@ -135,7 +150,22 @@ const MenuItem = ({
                 )}
               </>
               <div className="flex flex-row items-center justify-center gap-1">
-                <div>{item.icon}</div>
+                {item?.icon ? (
+                  <div className={`${subMenuOpen ? "rotate-12" : "rotate-0"}`}>
+                    {item.icon}
+                  </div>
+                ) : (
+                  <Image
+                    src={
+                      subMenuOpen
+                        ? item?.imageUrl?.open
+                        : item?.imageUrl?.closed
+                    }
+                    alt={item.title}
+                    lazy
+                    className="w-5 h-5 bg-transparent"
+                  />
+                )}
                 <p className="text-xl font-semibold">{item.title}</p>
               </div>
             </div>
@@ -153,15 +183,47 @@ const MenuItem = ({
             </div>
           )}
         </>
-      ) : (
+      ) : item.url ? (
         <a
-          {...(item.isFn ? { onClick: item.fn } : { href: item.path })}
+          href={item.url}
+          target="_blank"
+          rel="noopener noreferrer"
           className="flex flex-row items-center py-1 w-full hover:bg-opacity-80 hover:bg-[#2b2b2b] px-2 cursor-pointer gap-1"
         >
-          <div>{item.icon}</div>
+          <div>
+            {icon && (
+              <Image
+                src={icon}
+                alt={`${item.title} icon`}
+                className="bg-transparent w-7 h-7"
+                lazy
+              />
+            )}
+          </div>
           <span className="flex text-xl font-semibold">{item.title}</span>
         </a>
+      ) : (
+        <div
+          className={cn(
+            "flex flex-row items-center py-1 w-full hover:bg-opacity-80 hover:bg-[#2b2b2b] px-2 cursor-pointer gap-1",
+            {
+              "bg-opacity-75 bg-[#2b2b2b]": isActive,
+            }
+          )}
+        >
+          <div>
+            {icon && (
+              <Image
+                src={icon}
+                alt={`${item.title} icon`}
+                className="bg-transparent w-7 h-7"
+                lazy
+              />
+            )}
+          </div>
+          <span className="flex text-xl font-semibold">{item.title}</span>
+        </div>
       )}
-    </>
+    </div>
   );
 };

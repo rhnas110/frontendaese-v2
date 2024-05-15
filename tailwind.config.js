@@ -11,6 +11,7 @@ export default {
         blue_vs: "#389fdc",
         lightblue_vs: "#85d8fb",
         brown_vs: "#d98e73",
+        green_vs: "#6BAF8D",
         aese: {
           50: "#f2eeff",
           100: "#e6deff",
