@@ -13,6 +13,7 @@ import MailLogo from "../assets/logos/MailLogo.png";
 import { SideNavItem } from "../types/sidebarType";
 import { SIDENAV_ITEMS } from "../constants/sidebarItems";
 
+import { Tooltip } from "./_ui/Tooltip";
 import { Image } from "./Elements/Image";
 
 import { cn } from "../utils";
@@ -42,15 +43,19 @@ const Sidebar = () => {
         <div className="flex items-center justify-between px-2 bg-[#424242]">
           <h1 className="text-xl font-bold">frontendaese</h1>
           <div className="flex items-center justify-center gap-2">
-            <i
-              className="cursor-pointer"
-              onClick={() => window.location.reload()}
-            >
-              <RefreshIcon width={20} />
-            </i>
-            <i className="cursor-pointer" onClick={collapseAllFolders}>
-              <MinusIcon width={20} />
-            </i>
+            <Tooltip content="Refresh">
+              <i
+                className="cursor-pointer"
+                onClick={() => window.location.reload()}
+              >
+                <RefreshIcon width={20} />
+              </i>
+            </Tooltip>
+            <Tooltip content="Collapse Folders">
+              <i className="cursor-pointer" onClick={collapseAllFolders}>
+                <MinusIcon width={20} />
+              </i>
+            </Tooltip>
           </div>
         </div>
         <div className="overflow-y-auto h-5/6 scroll-smooth sidebar-scrollbar">

@@ -14,7 +14,7 @@ export default function PageWrapper({
   return (
     <>
       <div className="flex">
-        <div className="fixed hidden h-full lg:block">
+        <div className="fixed z-20 hidden h-full lg:block">
           <Sidebar />
         </div>
         <main className="flex-1 overflow-x-hidden">

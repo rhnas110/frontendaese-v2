@@ -1,8 +1,11 @@
 import { XIcon } from "@heroicons/react/solid";
+import tw from "tailwind-styled-components";
+
 import { Tab, useTabContext } from "../../../context/TabContext";
 import { getFileIcon } from "../../../utils/fileIcon";
+
+import { Tooltip } from "../../_ui/Tooltip";
 import { Image } from "../../Elements/Image";
-import tw from "tailwind-styled-components";
 
 const Container = tw.div`
   h-full 
@@ -39,7 +42,6 @@ const TabItem: React.FC<{ tab: Tab }> = ({ tab }) => {
   const icon = getFileIcon(tab.title);
 
   return (
-    // ADD TOOLTIP AGAR KETIKA DI HOVER TITLE NYA JELAS
     <Container
       data-tab-id={tab.id}
       className={`${
@@ -56,14 +58,19 @@ const TabItem: React.FC<{ tab: Tab }> = ({ tab }) => {
           className="mr-1 bg-transparent w-7 h-7"
         />
       )}
-      <TabTitle>{tab.title}</TabTitle>
-      <XIcon
-        className="flex-shrink-0 w-6 ml-4 hover:bg-gray-600 hover:rounded"
-        onClick={(e) => {
-          e.stopPropagation();
-          removeTab(tab.id);
-        }}
-      />
+      <Tooltip content={tab.title} className="text-gray-400">
+        <TabTitle>{tab.title}</TabTitle>
+      </Tooltip>
+      <Tooltip content="Close" className="text-gray-400" withArrow>
+        <button className="flex-shrink-0 w-6 ml-4 rounded hover:bg-neutral-600">
+          <XIcon
+            onClick={(e) => {
+              e.stopPropagation();
+              removeTab(tab.id);
+            }}
+          />
+        </button>
+      </Tooltip>
     </Container>
   );
 };
