@@ -5,16 +5,13 @@ import {
   RefreshIcon,
   MinusIcon,
 } from "@heroicons/react/solid";
-import { Link } from "react-router-dom";
-
-import LinkedinLogo from "../assets/logos/LinkedinLogo.png";
-import MailLogo from "../assets/logos/MailLogo.png";
 
 import { SideNavItem } from "../types/sidebarType";
 import { SIDENAV_ITEMS } from "../constants/sidebarItems";
 
 import { Tooltip } from "./_ui/Tooltip";
 import { Image } from "./Elements/Image";
+import { Social } from "./Social";
 
 import { cn } from "../utils";
 import { getFileIcon } from "../utils/fileIcon";
@@ -70,40 +67,7 @@ const Sidebar = () => {
           })}
         </div>
         <div className="absolute w-full bottom-6">
-          <div className="flex items-center justify-between px-4">
-            <Link to="https://github.com/rhnas110" target="_blank">
-              <Image
-                src="https://media.tenor.com/PvXJ4vZ0m-0AAAAi/hyolan-wolf.gif"
-                alt="Github Logo"
-                className="w-10 h-10 transition duration-500 bg-transparent text-yellow_vs hover:scale-125"
-                lazy
-              />
-            </Link>
-            <Link to="https://www.linkedin.com/in/raihanas/" target="_blank">
-              <Image
-                src={LinkedinLogo}
-                alt="Linkedin Logo"
-                className="w-10 h-10 transition duration-500 bg-transparent text-yellow_vs hover:scale-125"
-                lazy
-              />
-            </Link>
-            <Link to="mailto:raihanas110@gmail.com" target="_blank">
-              <Image
-                src={MailLogo}
-                alt="Mail Logo"
-                className="w-10 h-10 transition duration-500 bg-transparent text-yellow_vs hover:scale-125"
-                lazy
-              />
-            </Link>
-            <div>
-              <Image
-                src="https://media.tenor.com/zkaB7Dlry8YAAAAi/hug.gif"
-                alt="Cat"
-                className="w-10 h-10 transition duration-500 bg-transparent text-yellow_vs hover:scale-125"
-                lazy
-              />
-            </div>
-          </div>
+          <Social />
         </div>
       </div>
     </nav>
