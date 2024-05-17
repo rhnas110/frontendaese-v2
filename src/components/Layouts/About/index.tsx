@@ -1,5 +1,5 @@
 import { IdentificationIcon } from "@heroicons/react/solid";
-import List from "../../List";
+import List from "../List";
 import { skills } from "../../../constants/skills";
 
 const About = () => {

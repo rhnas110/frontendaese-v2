@@ -1,6 +1,7 @@
-import { ILoveTypeScript } from "../types";
+import { FC } from "react";
+import { ILoveTypeScript } from "../../../types";
 
-const List = ({ list }: { list: ILoveTypeScript }) => {
+const List: FC<{ list: ILoveTypeScript }> = ({ list }) => {
   return (
     <div className="grid grid-cols-2 gap-1 mt-4 text-sm xs:grid-cols-3 text-brown_vs">
       {list &&
