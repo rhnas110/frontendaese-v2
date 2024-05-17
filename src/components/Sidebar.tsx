@@ -7,7 +7,6 @@ import {
 } from "@heroicons/react/solid";
 
 import { SideNavItem } from "../types/sidebarType";
-import { SIDENAV_ITEMS } from "../constants/sidebarItems";
 
 import { Tooltip } from "./_ui/Tooltip";
 import { Image } from "./Elements/Image";
@@ -16,23 +15,10 @@ import { Social } from "./Social";
 import { cn } from "../utils";
 import { getFileIcon } from "../utils/fileIcon";
 import { useTabContext } from "../context/TabContext";
+import { useSidebarContext } from "../context/SidebarContext";
 
 const Sidebar = () => {
-  const [sidebarItems, setSidebarItems] = useState(SIDENAV_ITEMS);
-
-  const collapseAllFolders = () => {
-    console.log("Collapse all folders called");
-    const updatedItems = sidebarItems.map((item) => {
-      if (item.submenu) {
-        return {
-          ...item,
-          subMenuOpen: false,
-        };
-      }
-      return item;
-    });
-    setSidebarItems([...updatedItems]);
-  };
+  const { sidebarItems, collapseAllFolders } = useSidebarContext();
 
   return (
     <nav className="flex h-full text-lg text-gray-400 bg-backgroundSecondary w-72">
@@ -57,13 +43,7 @@ const Sidebar = () => {
         </div>
         <div className="overflow-y-auto h-5/6 scroll-smooth sidebar-scrollbar">
           {sidebarItems.map((item, idx) => {
-            return (
-              <MenuItem
-                key={idx}
-                item={item}
-                collapseAllFolders={collapseAllFolders}
-              />
-            );
+            return <MenuItem key={idx} item={item} />;
           })}
         </div>
         <div className="absolute w-full bottom-6">
@@ -76,31 +56,43 @@ const Sidebar = () => {
 
 export default Sidebar;
 
-const MenuItem = ({
-  item,
-  collapseAllFolders,
-}: {
-  item: SideNavItem;
-  collapseAllFolders: () => void;
-}) => {
+const MenuItem: React.FC<{ item: SideNavItem }> = ({ item }) => {
   const { addTab, activeTab } = useTabContext();
+  const { setSidebarItems } = useSidebarContext();
   const [subMenuOpen, setSubMenuOpen] = useState(item?.subMenuOpen || false);
-  const toggleSubMenu = () => {
-    setSubMenuOpen((prevState) => !prevState);
+
+  const toggleSubMenu = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setSubMenuOpen(!subMenuOpen);
+    setSidebarItems((prevItems) => {
+      const updateItems = (items: SideNavItem[]): SideNavItem[] => {
+        return items.map((i) => {
+          if (i.title === item.title) {
+            return { ...i, subMenuOpen: !subMenuOpen };
+          } else if (i.subMenuItems) {
+            return { ...i, subMenuItems: updateItems(i.subMenuItems) };
+          }
+          return i;
+        });
+      };
+
+      return updateItems(prevItems);
+    });
   };
 
   useEffect(() => {
     setSubMenuOpen(item?.subMenuOpen || false);
   }, [item?.subMenuOpen]);
+
   const icon = getFileIcon(item.title);
-  const title = item.title.toLowerCase()?.split(".")[0];
+  const id = item.title.toLowerCase()?.split(".")[0];
+  const isActive = activeTab === item.title.toLowerCase().split(".")[0];
 
   const handleItemClick = () => {
     if (!item.submenu && !item.url) {
-      addTab({ id: title, title: item.title });
+      addTab({ id, title: item.title });
     }
   };
-  const isActive = activeTab === item.title.toLowerCase().split(".")[0];
 
   return (
     <div onClick={handleItemClick}>
@@ -143,11 +135,7 @@ const MenuItem = ({
           {subMenuOpen && (
             <div className="flex flex-col w-full pl-2.5">
               {item.subMenuItems?.map((subItem, idx) => (
-                <MenuItem
-                  key={idx}
-                  item={subItem}
-                  collapseAllFolders={collapseAllFolders}
-                />
+                <MenuItem key={idx} item={subItem} />
               ))}
             </div>
           )}
