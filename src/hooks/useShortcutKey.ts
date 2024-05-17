@@ -11,8 +11,7 @@ const useShortcutKey = ({ modifierKeys, keys, action }: ShortcutKeyOptions) => {
     const onKeyDown = (e: KeyboardEvent) => {
       const isModifierKeyPressed = modifierKeys.some(
         (key) =>
-          (e.metaKey && key === "Meta") ||
-          (e.ctrlKey && key === "Control") ||
+          (key === "Control" && (e.metaKey || e.ctrlKey)) ||
           (e.altKey && key === "Alt") ||
           (e.shiftKey && key === "Shift")
       );
