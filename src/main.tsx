@@ -7,6 +7,7 @@ import "./index.css";
 import { HelmetProvider } from "react-helmet-async";
 import { TabProvider } from "./context/TabContext";
 import { SidebarProvider } from "./context/SidebarContext.tsx";
+import { KeyShortcutProvider } from "./context/KeyShortcutContext.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -14,7 +15,9 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       <Router>
         <TabProvider>
           <SidebarProvider>
-            <App />
+            <KeyShortcutProvider>
+              <App />
+            </KeyShortcutProvider>
           </SidebarProvider>
         </TabProvider>
       </Router>
