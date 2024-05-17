@@ -1,4 +1,3 @@
-// KeyShortcutContext.tsx
 import { createContext, FC, ReactNode, useContext, useState } from "react";
 import useShortcutKey from "../hooks/useShortcutKey";
 
