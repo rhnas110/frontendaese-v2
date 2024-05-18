@@ -2,6 +2,8 @@ import { ReactNode } from "react";
 
 import Sidebar from "./Sidebar";
 import MarginWidthWrapper from "./MarginWidthWrapper";
+import { ModalSettings } from "./Layouts/Settings";
+
 import { cn } from "../utils";
 import { useKeyShortcut } from "../context/KeyShortcutContext";
 
@@ -27,6 +29,7 @@ export default function PageWrapper({
               {children}
             </div>
           </MarginWidthWrapper>
+          <ModalSettings />
         </main>
       </div>
     </>
