@@ -20,8 +20,6 @@ type TabContextType = {
   setActiveTab: (tabId: string) => void;
   addTab: (tab: Tab) => void;
   removeTab: (tabId: string) => void;
-  openTab: (tabId: string) => void;
-  closeTab: (tabId: string) => void;
 };
 
 // Create context
@@ -80,32 +78,6 @@ export const TabProvider = ({ children }: { children: ReactNode }) => {
     }
   };
 
-  const openTab = (tabId: string) => {
-    setTabs((prevTabs) => {
-      if (prevTabs === null || prevTabs === undefined) {
-        throw new Error(
-          "Attempted to open a tab from a null or undefined tabs state."
-        );
-      }
-      return prevTabs.map((tab) =>
-        tab.id === tabId ? { ...tab, isOpen: true } : tab
-      );
-    });
-  };
-
-  const closeTab = (tabId: string) => {
-    setTabs((prevTabs) => {
-      if (prevTabs === null || prevTabs === undefined) {
-        throw new Error(
-          "Attempted to close a tab from a null or undefined tabs state."
-        );
-      }
-      return prevTabs.map((tab) =>
-        tab.id === tabId ? { ...tab, isOpen: false } : tab
-      );
-    });
-  };
-
   useEffect(() => {
     if (tabs.length === 0) {
       setActiveTab("welcome");
@@ -121,8 +93,6 @@ export const TabProvider = ({ children }: { children: ReactNode }) => {
         setActiveTab: handleSetActiveTabState,
         addTab,
         removeTab,
-        openTab,
-        closeTab,
       }}
     >
       {children}
