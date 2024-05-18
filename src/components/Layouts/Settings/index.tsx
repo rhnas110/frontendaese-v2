@@ -1,19 +1,21 @@
 import { useState } from "react";
 import Modal from "../../_ui/Modal";
+import { Kbd } from "../../_ui/Kbd";
+import { DarkMode } from "../../Elements/Button/DarkMode";
 import useShortcutKey from "../../../hooks/useShortcutKey";
 
 const hotkeys = [
   {
     name: "Open Settings",
-    key: "Control + .",
+    key: "Ctrl/⌘ + .",
   },
   {
     name: "Show/Hide Sidebar",
-    key: "Control + b",
+    key: "Ctrl/⌘ + b",
   },
   {
     name: "Close Tab",
-    key: "Control + w",
+    key: "Alt + w",
   },
 ];
 
@@ -34,19 +36,21 @@ export const ModalSettings = () => {
         <div className="flex flex-col gap-2 text-gray-300">
           <div className="flex items-center justify-between text-lg">
             <p>Dark Mode</p>
-            <p>Toggle</p>
+            <DarkMode />
           </div>
           <div>
-            <p className="mb-2 text-lg">Hotkeys</p>
-            {hotkeys.map((hotkey) => (
-              <div
-                className="flex items-center justify-between text-base leading-5"
-                key={hotkey.key}
-              >
-                <p>{hotkey.name}</p>
-                <kbd>{hotkey.key}</kbd>
-              </div>
-            ))}
+            <p className="mb-1 text-lg">Hotkeys</p>
+            <div className="flex flex-col gap-y-1">
+              {hotkeys.map((hotkey) => (
+                <div
+                  className="flex items-center justify-between text-base"
+                  key={hotkey.key}
+                >
+                  <p>{hotkey.name}</p>
+                  <Kbd>{hotkey.key}</Kbd>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </Modal.Content>

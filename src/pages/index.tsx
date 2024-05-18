@@ -3,6 +3,10 @@ import SEO from "../components/SEO";
 import Home from "./Home";
 import { NotFound } from "./404";
 
+// Toast
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 // custom title
 function Page({ children }: { children: ReactNode }) {
   return <>{children}</>;
@@ -13,6 +17,7 @@ function HomePage() {
     <Page>
       <SEO />
       <Home />
+      <ToastContainer />
     </Page>
   );
 }

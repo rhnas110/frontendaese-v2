@@ -57,3 +57,8 @@ body::-webkit-scrollbar-thumb {
         scrollbar-color: theme(colors.green_vs) var(--sb-track-color);
     }
 }
+
+/* Dark Mode Toggle */
+#dark-toggle:checked~.dot {
+    transform: translateX(100%);
+}
