@@ -2,6 +2,7 @@ import Hero from "../Home/Hero";
 import About from "../About";
 import Resume from "../Resume";
 import Contact from "../Contact";
+import { Kbd } from "../../_ui/Kbd";
 import { Image } from "../../Elements/Image";
 import { NotFound as NotFoundLayouts } from "../../../pages/404";
 
@@ -12,25 +13,34 @@ import VSCode from "../../../assets/VSCode.png";
 const Welcome = () => {
   const { addTab } = useTabContext();
   return (
-    <div className="flex flex-col items-center py-32">
-      <Image
-        src={VSCode}
-        alt="VSCode"
-        lazy
-        className="bg-transparent w-80 saturate-0"
-      />
-      <h1 className="text-4xl font-bold text-center text-gray-300">Welcome!</h1>
-      <p className="text-lg text-center text-gray-400">
-        Select a file from the sidebar to get started.
-      </p>
-      <div className="text-center text-brown_vs">
-        <span>cd </span>
-        <code
-          className="italic underline cursor-pointer underline-offset-2"
-          onClick={() => addTab({ id: "readme", title: "README.md" })}
-        >
-          ./README.md
-        </code>
+    <div className="flex flex-col items-center px-2 py-32 gap-y-4">
+      <div className="text-center">
+        <Image
+          src={VSCode}
+          alt="VSCode"
+          lazy
+          className="bg-transparent w-80 saturate-0"
+        />
+        <h1 className="text-4xl font-bold text-gray-300">Welcome!</h1>
+        <p className="text-lg text-gray-400">
+          Select a file from the sidebar to get started.
+        </p>
+        <div className="text-brown_vs">
+          <span>cd </span>
+          <code
+            className="italic underline cursor-pointer underline-offset-2"
+            onClick={() => addTab({ id: "readme", title: "README.md" })}
+          >
+            ./README.md
+          </code>
+        </div>
+      </div>
+
+      <div className="w-full max-w-xs text-gray-400">
+        <div className="flex items-center justify-between text-base">
+          <p>Open Settings</p>
+          <Kbd>Ctrl/⌘ + .</Kbd>
+        </div>
       </div>
     </div>
   );
