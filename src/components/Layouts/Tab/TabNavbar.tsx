@@ -1,11 +1,12 @@
 import { useEffect, useRef } from "react";
 
+import useShortcutKey from "../../../hooks/useShortcutKey";
 import { useTabContext } from "../../../context/TabContext";
 import { ILoveTypeScript } from "../../../types";
 import TabItem from "./TabItem";
 
 const TabNavbar: React.FC = () => {
-  const { tabs, activeTab } = useTabContext();
+  const { tabs, activeTab, removeTab } = useTabContext();
 
   const navbarRef = useRef<HTMLDivElement>(null);
 
@@ -23,6 +24,17 @@ const TabNavbar: React.FC = () => {
       }
     }
   }, [activeTab]);
+  useShortcutKey({
+    modifierKeys: ["Alt"],
+    keys: ["w"],
+    action: () => {
+      const lastTab = tabs.length === 1 && activeTab === "welcome";
+      const tabIdToRemove = lastTab ? tabs[0].id : activeTab;
+      if (tabs.length > 0) {
+        removeTab(tabIdToRemove!);
+      }
+    },
+  });
   return (
     <div className="bg-[#424242] h-16 w-full fixed hidden lg:block z-10">
       <div
