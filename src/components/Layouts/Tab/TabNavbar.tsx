@@ -36,6 +36,7 @@ const TabNavbar: React.FC = () => {
       }
     },
   });
+  if (tabs?.length === 0) return null;
   return (
     <div className="bg-[#424242] h-16 w-full fixed hidden lg:block z-10">
       <Reorder.Group
