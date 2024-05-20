@@ -83,12 +83,12 @@ const tabComponents: ILoveTypeScript = {
   contact: Contact,
   readme: README,
 };
-interface TabContentProps {
-  activeTab: string;
-}
-const TabContent: React.FC<TabContentProps> = ({ activeTab }) => {
-  // Get the component corresponding to the active tab
-  const Component = tabComponents[activeTab?.toLowerCase()] || NotFound;
+const TabContent: React.FC = () => {
+  const { activeTab } = useTabContext();
+
+  const Component =
+    tabComponents[activeTab?.toLowerCase() as keyof typeof tabComponents] ||
+    NotFound;
 
   return <Component />;
 };
