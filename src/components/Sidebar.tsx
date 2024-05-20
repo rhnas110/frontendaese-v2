@@ -148,14 +148,12 @@ const MenuItem: React.FC<{ item: SideNavItem }> = ({ item }) => {
           className="flex flex-row items-center py-1 w-full hover:bg-opacity-80 hover:bg-[#2b2b2b] px-2 cursor-pointer gap-1"
         >
           <div>
-            {icon && (
-              <Image
-                src={icon}
-                alt={`${item.title} icon`}
-                className="bg-transparent w-7 h-7"
-                lazy
-              />
-            )}
+            <Image
+              src={item.image}
+              alt={`${item.title} icon`}
+              className="bg-transparent w-7 h-7"
+              lazy
+            />
           </div>
           <span className="flex text-xl font-semibold">{item.title}</span>
         </a>
