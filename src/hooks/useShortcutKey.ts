@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Desktop } from "../utils/screen";
 
 interface ShortcutKeyOptions {
   modifierKeys: string[];
@@ -20,7 +21,7 @@ const useShortcutKey = ({ modifierKeys, keys, action }: ShortcutKeyOptions) => {
 
       if (isModifierKeyPressed && isKeyPressed) {
         e.preventDefault();
-        action();
+        if (Desktop) action();
       }
     };
 
