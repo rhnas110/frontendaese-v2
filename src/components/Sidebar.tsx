@@ -151,7 +151,7 @@ const MenuItem: React.FC<{ item: SideNavItem }> = ({ item }) => {
             <Image
               src={item.image}
               alt={`${item.title} icon`}
-              className="bg-transparent w-7 h-7"
+              className="object-contain bg-transparent w-7 h-7"
               lazy
             />
           </div>
