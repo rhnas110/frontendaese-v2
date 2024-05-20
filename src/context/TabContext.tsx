@@ -16,6 +16,7 @@ export type Tab = {
 // Define the type of the context
 type TabContextType = {
   tabs: Tab[];
+  setTabs: (tabs: Tab[]) => void;
   activeTab: string | null;
   setActiveTab: (tabId: string) => void;
   addTab: (tab: Tab) => void;
@@ -89,6 +90,7 @@ export const TabProvider = ({ children }: { children: ReactNode }) => {
     <TabContext.Provider
       value={{
         tabs,
+        setTabs,
         activeTab,
         setActiveTab: handleSetActiveTabState,
         addTab,

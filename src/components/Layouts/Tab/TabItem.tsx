@@ -21,11 +21,11 @@ const Container = tw.div`
   font-medium
   text-gray-300
   relative
-  flex-shrink-0
   flex-grow-0
   max-w-xs
   min-w-0
   overflow-hidden
+  select-none
 `;
 
 const TabTitle = tw.span`

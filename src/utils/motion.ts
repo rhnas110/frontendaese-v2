@@ -1,3 +1,3 @@
-import { motion, AnimatePresence, useCycle } from "framer-motion";
+import { motion, AnimatePresence, useCycle, Reorder } from "framer-motion";
 
-export { motion, AnimatePresence, useCycle };
+export { motion, AnimatePresence, useCycle, Reorder };
