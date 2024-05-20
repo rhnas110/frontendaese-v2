@@ -5,18 +5,37 @@ import { GlobeAltIcon } from "@heroicons/react/solid";
 const WEB: {
   title: string;
   url?: string;
+  image?: string;
 }[] = [
   {
-    title: "Project 1.js",
-    url: "#",
+    title: "impact.",
+    url: "https://im-pact.netlify.app/",
+    image: "https://im-pact.netlify.app/favicon.ico",
   },
   {
-    title: "Project 2.js",
-    url: "#",
+    title: "DNA News",
+    url: "https://github.com/rhnas110/dna-news",
+    image: "https://abangkuh.de/assets/dnanews.png",
   },
   {
-    title: "Project 3.ts",
-    url: "#",
+    title: "XPValor",
+    url: "https://github.com/rhnas110/xpvalor",
+    image: "https://abangkuh.de/assets/xpvalor.png",
+  },
+  {
+    title: "motionime",
+    url: "https://motionime.online/",
+    image: "https://motionime.online/favicon.ico",
+  },
+  {
+    title: "aese",
+    url: "https://github.com/rhnas110/aese",
+    image: "https://frontendaese.netlify.app/aese32.png",
+  },
+  {
+    title: "MOKOMDO",
+    url: "https://jcwd220405.purwadhikabootcamp.com/",
+    image: "https://jcwd220405.purwadhikabootcamp.com/mokomdo-logo.png",
   },
 ];
 
