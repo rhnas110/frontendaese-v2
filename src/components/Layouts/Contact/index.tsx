@@ -1,6 +1,6 @@
 import { MailIcon } from "@heroicons/react/solid";
 import { Link } from "react-router-dom";
-import { MotionInView } from "../../Elements/Motion";
+import { FramerMagnetic, MotionInView } from "../../Elements/Motion";
 
 const Contact = () => {
   return (
@@ -22,13 +22,15 @@ const Contact = () => {
           say hello, please feel free to contact me and I will try my best to
           get back to you!
         </code>
-        <Link
-          to="mailto:raihanas110@gmail.com"
-          target="_blank"
-          className="px-3 py-2 font-semibold transition duration-300 rounded text-background hover:bg-transparent hover:text-lightblue_vs bg-lightblue_vs hover:border hover:border-lightblue_vs"
-        >
-          <code>Contact me</code>
-        </Link>
+        <FramerMagnetic>
+          <Link
+            to="mailto:raihanas110@gmail.com"
+            target="_blank"
+            className="px-3 py-2 font-semibold transition duration-300 rounded text-background hover:bg-transparent hover:text-lightblue_vs bg-lightblue_vs hover:border hover:border-lightblue_vs"
+          >
+            <code>Contact me</code>
+          </Link>
+        </FramerMagnetic>
       </div>
     </MotionInView>
   );
