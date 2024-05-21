@@ -1,5 +1,5 @@
 import { createContext, FC, ReactNode, useContext, useState } from "react";
-import { SideNavItem } from "../types/sidebarType";
+import { SideNavItem } from "../types/menuType";
 import { SIDENAV_ITEMS } from "../constants/sidebarItems";
 
 interface SidebarContextProps {

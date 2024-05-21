@@ -6,7 +6,7 @@ import {
   MinusIcon,
 } from "@heroicons/react/solid";
 
-import { SideNavItem } from "../types/sidebarType";
+import { SideNavItem } from "../types/menuType";
 
 import { Tooltip } from "./_ui/Tooltip";
 import { Image } from "./Elements/Image";
