@@ -30,11 +30,11 @@ export const ModalOnceUp = () => {
             Try opening this site on a device with a width of 1024px or more!
           </p>
           <p>There will be interesting things that you will like.</p>
-          <div className="absolute -top-6 -right-12">
+          <div className="absolute -top-6 -right-[50px]">
             <Image
               alt="hello"
               src="https://media.tenor.com/PEp7__gqEYoAAAAi/mythikore-anime-girl.gif"
-              className="w-40 bg-transparent opacity-50"
+              className="w-40 bg-transparent opacity-25"
               lazy
             />
           </div>
