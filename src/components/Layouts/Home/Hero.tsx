@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import JSIcon from "../../../assets/icons/JSIcon.png";
 import { Image } from "../../Elements/Image";
+import { Motion } from "../../Elements/Motion";
 import { MobileXs } from "../../../utils/screen";
 function Hero() {
   const codeString = `const profile = {
@@ -39,7 +40,11 @@ function Hero() {
     deleteSpeed: 50,
   });
   return (
-    <div className="w-full px-2 pt-60">
+    <Motion
+      className="w-full px-2 pt-60"
+      initial={{ opacity: 0, x: -25 }}
+      animate={{ opacity: 1, x: 0 }}
+    >
       <div className="flex flex-col gap-2">
         <code className="text-lg text-lightblue_vs">
           {greeting}
@@ -80,7 +85,7 @@ function Hero() {
           <code>Let's Connect</code>
         </Link>
       </div>
-    </div>
+    </Motion>
   );
 }
 

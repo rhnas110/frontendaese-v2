@@ -1,9 +1,14 @@
 import { MailIcon } from "@heroicons/react/solid";
 import { Link } from "react-router-dom";
+import { MotionInView } from "../../Elements/Motion";
 
 const Contact = () => {
   return (
-    <div className="w-full px-2 py-60">
+    <MotionInView
+      className="w-full px-2 py-60"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+    >
       <div className="flex items-center justify-center gap-2">
         <MailIcon className="w-10 h-10 sm:w-12 sm:h-12 text-yellow_vs" />
         <code className="text-[#e6f1ff] text-3xl whitespace-nowrap">
@@ -25,7 +30,7 @@ const Contact = () => {
           <code>Contact me</code>
         </Link>
       </div>
-    </div>
+    </MotionInView>
   );
 };
 

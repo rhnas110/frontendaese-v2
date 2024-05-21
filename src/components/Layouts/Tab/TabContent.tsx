@@ -4,6 +4,7 @@ import Resume from "../Resume";
 import Contact from "../Contact";
 import { Kbd } from "../../_ui/Kbd";
 import { Image } from "../../Elements/Image";
+import { Motion } from "../../Elements/Motion";
 import { NotFound as NotFoundLayouts } from "../../../pages/404";
 
 import { ILoveTypeScript } from "../../../types";
@@ -13,7 +14,11 @@ import VSCode from "../../../assets/VSCode.png";
 const Welcome = () => {
   const { addTab } = useTabContext();
   return (
-    <div className="flex flex-col items-center px-2 py-32 gap-y-4">
+    <Motion
+      className="flex flex-col items-center px-2 py-32 gap-y-4"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+    >
       <div className="text-center">
         <Image
           src={VSCode}
@@ -42,7 +47,7 @@ const Welcome = () => {
           <Kbd>Ctrl/⌘ + .</Kbd>
         </div>
       </div>
-    </div>
+    </Motion>
   );
 };
 const README = () => {

@@ -95,6 +95,9 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
       {
         title: "Welcome.ts",
       },
+      {
+        title: "README.md",
+      },
     ],
   },
 ];

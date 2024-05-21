@@ -1,12 +1,18 @@
 import { IdentificationIcon } from "@heroicons/react/solid";
 import List from "../List";
 import { skills } from "../../../constants/skills";
+import { MotionInView } from "../../Elements/Motion";
 
 const About = () => {
   return (
     <div className="w-full px-2 pt-60">
       <div className="flex justify-end mb-8">
-        <div className="text-right sm:w-7/12">
+        <MotionInView
+          className="text-right sm:w-7/12"
+          initial={{ opacity: 0, x: 25 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          once
+        >
           <div className="flex items-center justify-end gap-2">
             <code className="text-[#e6f1ff] text-3xl whitespace-nowrap">
               About Me
@@ -22,12 +28,17 @@ const About = () => {
             collaborative environments and continually seeks to enhance my
             skills for tackling new challenges in web development.
           </code>
-        </div>
+        </MotionInView>
       </div>
-      <div className="font-bold text-left text-gray-400 sm:w-7/12">
+      <MotionInView
+        className="font-bold text-left text-gray-400 sm:w-7/12"
+        initial={{ opacity: 0, x: -25 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        once
+      >
         <code>Tech stack:</code>
         <List list={skills} />
-      </div>
+      </MotionInView>
     </div>
   );
 };

@@ -1,10 +1,15 @@
 import { FC } from "react";
 import { Image } from "../components/Elements/Image";
+import { Motion } from "../components/Elements/Motion";
 import NotFoundImage from "../assets/NotFound.png";
 
 export const NotFound: FC = () => {
   return (
-    <div className="flex items-center justify-center w-full h-screen px-2">
+    <Motion
+      className="flex items-center justify-center w-full h-screen px-2"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+    >
       <div className="flex flex-col items-center opacity-75">
         <Image
           src={NotFoundImage}
@@ -21,6 +26,6 @@ export const NotFound: FC = () => {
           </p>
         </div>
       </div>
-    </div>
+    </Motion>
   );
 };

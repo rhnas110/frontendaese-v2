@@ -1,9 +1,15 @@
 import { ClipboardListIcon } from "@heroicons/react/solid";
 import { Link } from "react-router-dom";
+import { MotionInView } from "../../Elements/Motion";
 
 const Resume = () => {
   return (
-    <div className="w-full px-2 pt-60">
+    <MotionInView
+      className="w-full px-2 pt-60"
+      initial={{ opacity: 0, x: -25 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      once
+    >
       <div className="flex items-center gap-2">
         <ClipboardListIcon className="w-10 h-10 sm:w-12 sm:h-12 text-yellow_vs" />
         <code className="text-[#e6f1ff] text-3xl whitespace-nowrap">
@@ -42,7 +48,7 @@ const Resume = () => {
           </Link>
         </div>
       </div>
-    </div>
+    </MotionInView>
   );
 };
 
