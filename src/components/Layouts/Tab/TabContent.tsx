@@ -90,7 +90,7 @@ const Welcome = () => {
             className="italic underline cursor-pointer underline-offset-2"
             onClick={() => addTab({ id: "readme", title: "README.md" })}
           >
-            ./README.md
+            ../README.md
           </code>
         </div>
       </div>
