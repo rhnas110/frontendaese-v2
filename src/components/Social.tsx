@@ -15,7 +15,7 @@ export const Social: FC = () => {
             <Image
               src={social.icon}
               alt={social.name}
-              className="w-10 h-10 transition duration-500 bg-transparent text-yellow_vs hover:scale-125"
+              className="w-10 h-10 transition duration-500 bg-transparent text-yellow_vs hover:scale-125 saturate-0 hover:saturate-100"
               lazy
             />
           </Link>
