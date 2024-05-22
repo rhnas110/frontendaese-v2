@@ -1,3 +1,4 @@
+import { anOldHope } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import Hero from "../Home/Hero";
 import About from "../About";
 import Resume from "../Resume";
@@ -5,12 +6,41 @@ import Contact from "../Contact";
 import { Kbd } from "../../_ui/Kbd";
 import { Image } from "../../Elements/Image";
 import { Motion } from "../../Elements/Motion";
+import { CodeBlock } from "../../Elements/CodeBlock";
 import { NotFound as NotFoundLayouts } from "../../../pages/404";
 
 import { ILoveTypeScript } from "../../../types";
 import { useTabContext } from "../../../context/TabContext";
 import VSCode from "../../../assets/VSCode.png";
 
+const App = () => {
+  const codeString = `import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter as Router } from "react-router-dom";
+import App from "./App.tsx";
+import "./index.css";
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
+    <Router>
+      <App />
+    </Router>
+  </React.StrictMode>
+);
+`;
+  return (
+    <div className="px-2 py-16">
+      <CodeBlock
+        language="typescript"
+        showLineNumbers
+        style={anOldHope}
+        customStyle={{ background: "transparent" }}
+      >
+        {codeString}
+      </CodeBlock>
+    </div>
+  );
+};
 const Welcome = () => {
   const { addTab } = useTabContext();
   return (
@@ -82,6 +112,7 @@ const tabComponents: ILoveTypeScript = {
       <Contact />
     </>
   ),
+  app: App,
   welcome: Welcome,
   about: About,
   resume: Resume,
