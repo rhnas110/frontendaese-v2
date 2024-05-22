@@ -24,7 +24,7 @@ const Sidebar = () => {
     <nav className="flex h-full text-lg text-gray-400 bg-backgroundSecondary w-72">
       <div className="relative w-full h-full">
         <div className="flex items-center justify-between px-2 bg-[#424242]">
-          <h1 className="text-xl font-bold">frontendaese</h1>
+          <h1 className="text-xl font-bold select-none">frontendaese</h1>
           <div className="flex items-center justify-center gap-2">
             <Tooltip content="Refresh">
               <i
