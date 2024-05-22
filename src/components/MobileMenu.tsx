@@ -155,7 +155,7 @@ const Menu: React.FC<{ item: MobileMenuItem }> = ({ item }) => {
 const MenuToggle = ({ toggle }: { toggle: () => void }) => (
   <button
     onClick={toggle}
-    className="fixed z-30 pointer-events-auto right-4 top-[30px]"
+    className="fixed z-30 pointer-events-auto right-4 top-6"
   >
     <svg width="23" height="23" viewBox="0 0 23 23">
       <Path
