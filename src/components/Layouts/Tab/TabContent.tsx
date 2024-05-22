@@ -41,6 +41,30 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     </div>
   );
 };
+const IndexCSS = () => {
+  const codeString = `@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-color: theme(colors.background);
+    color: theme(colors.foreground);
+    overflow-x: hidden;
+}
+`;
+  return (
+    <div className="px-2 py-16">
+      <CodeBlock
+        language="css"
+        showLineNumbers
+        style={anOldHope}
+        customStyle={{ background: "transparent" }}
+      >
+        {codeString}
+      </CodeBlock>
+    </div>
+  );
+};
 const Welcome = () => {
   const { addTab } = useTabContext();
   return (
@@ -114,6 +138,7 @@ const tabComponents: ILoveTypeScript = {
   ),
   app: App,
   welcome: Welcome,
+  index: IndexCSS,
   about: About,
   resume: Resume,
   contact: Contact,

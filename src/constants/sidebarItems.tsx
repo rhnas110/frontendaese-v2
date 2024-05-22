@@ -93,6 +93,9 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
         title: "App.ts",
       },
       {
+        title: "index.css",
+      },
+      {
         title: "Welcome.ts",
       },
       {
