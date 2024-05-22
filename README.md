@@ -1,30 +1,58 @@
-# React + TypeScript + Vite
+<div align=center>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h1>frontendaese</h1>
 
-Currently, two official plugins are available:
+**frontendaese** is a personal portfolio website inspired by Visual Studio Code.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![frontendaese Preview](/src/assets/preview.png)
 
-## Expanding the ESLint configuration
+</div>
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Languages
 
-- Configure the top-level `parserOptions` property like this:
+_Read this in other languages: [English](README.md), [Bahasa](README.id.md)._
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Table of Contents
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- [Introduction](#introduction)
+- [Demo](#demo)
+- [Tech Stack](#tech-stack)
+- [Features](#features)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
+
+## Introduction
+
+Welcome to **frontendaese**, a personal portfolio website designed to showcase my skills and projects. Inspired by the look and feel of Visual Studio Code, this portfolio acts like an Integrated Development Environment (IDE), providing a unique and interactive experience for visitors.
+
+## Demo
+
+- **[Demo]**
+
+## Tech Stack
+
+<div align=center>
+
+![React](https://raw.githubusercontent.com/SAWARATSUKI/KawaiiLogos/main/React/React.png)
+![TypeScript](https://img.shields.io/badge/TypeScript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-black?style=for-the-badge&logo=framer&logoColor=blue)
+
+</div>
+
+## Features
+
+- **IDE-like Interface**: Designed to act like an integrated development environment (IDE), especially Visual Studio Code, providing an intuitive and familiar user experience.
+- **Tabbed Navigation**: Features a dynamic tabbed navigation system where tabs can be easily added, closed, and reordered through drag-and-drop interactions.
+
+## License
+
+frontendaese is licensed under the [MIT License](LICENSE).
+
+## Acknowledgments
+
+- **[SAWARATSUKI]** Thanks for providing such a Kawaii Logo
+
+[comment]: <> (LINK VARIABLE)
+[SAWARATSUKI]: https://github.com/SAWARATSUKI
+[demo]: https://frontendaese.de
