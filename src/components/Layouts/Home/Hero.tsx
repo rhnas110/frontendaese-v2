@@ -1,11 +1,20 @@
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { a11yDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import {
+  a11yDark,
+  obsidian,
+  anOldHope,
+} from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import { Link } from "react-router-dom";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
+
 import JSIcon from "../../../assets/icons/JSIcon.png";
 import { Image } from "../../Elements/Image";
 import { Motion } from "../../Elements/Motion";
+import { CodeBlock } from "../../Elements/CodeBlock";
 import { MobileXs } from "../../../utils/screen";
+import { randomIntFromInterval } from "../../../utils";
+
+const styles = [a11yDark, obsidian, anOldHope];
+const style = styles[randomIntFromInterval(0, styles.length - 1)];
 function Hero() {
   const codeString = `const profile = {
     name: "Raihan Arif Styawan",
@@ -29,7 +38,7 @@ function Hero() {
       "Merhaba!", // Turkish
       "Konnichiwa sekai!",
     ],
-    loop: 3,
+    loop: 2,
     typeSpeed: 80,
     deleteSpeed: 100,
   });
@@ -60,9 +69,9 @@ function Hero() {
             />
             <code>profile.js</code>
           </div>
-          <SyntaxHighlighter
+          <CodeBlock
             language="javascript"
-            style={a11yDark}
+            style={style}
             customStyle={{
               margin: "0",
               padding: "0.5rem",
@@ -73,7 +82,7 @@ function Hero() {
             wrapLongLines={MobileXs}
           >
             {code}
-          </SyntaxHighlighter>
+          </CodeBlock>
         </div>
       </div>
       <div className="mt-8">
