@@ -19,7 +19,7 @@ export const MotionInView = ({
   once = false,
   amount = 0.5,
   children,
-  className,
+  className = "",
   ...props
 }) => {
   return (
