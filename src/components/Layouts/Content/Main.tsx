@@ -8,6 +8,8 @@ import { useTabContext } from "../../../context/TabContext";
 import VSCode from "../../../assets/VSCode.png";
 
 export const App = () => {
+  const { addTab } = useTabContext();
+
   const codeString = `import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router } from "react-router-dom";
@@ -29,6 +31,15 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         showLineNumbers
         style={anOldHope}
         customStyle={{ background: "transparent" }}
+        lineProps={(lineNumber: number) =>
+          lineNumber === 5
+            ? {
+                style: { cursor: "pointer" },
+                onClick: () => addTab({ id: "index", title: "index.css" }),
+              }
+            : {}
+        }
+        wrapLines
       >
         {codeString}
       </CodeBlock>
