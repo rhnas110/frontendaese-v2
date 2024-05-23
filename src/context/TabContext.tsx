@@ -30,9 +30,11 @@ const TabContext = createContext<TabContextType | undefined>(undefined);
 const first = firstRender();
 // Define the provider component
 export const TabProvider = ({ children }: { children: ReactNode }) => {
+  const updateLogShown = localStorage.getItem("updateLogShown");
   const defaultTabs = [
     { id: first.id, title: `${first.title}.ts` },
     { id: "readme", title: "README.md" },
+    ...(updateLogShown ? [] : [{ id: "update log", title: "Update Log" }]),
   ];
   const [tabs, setTabs] = useState<Tab[]>(defaultTabs);
   const [activeTab, setActiveTab] = useState<string | null>(defaultTabs[0].id);
@@ -44,6 +46,11 @@ export const TabProvider = ({ children }: { children: ReactNode }) => {
       ...prevHistory.filter((id) => id !== tabId),
       tabId,
     ]);
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
   }
 
   const addTab = (tab: Tab) => {
@@ -76,6 +83,9 @@ export const TabProvider = ({ children }: { children: ReactNode }) => {
       const newActiveTab =
         tabHistory.length > 1 ? tabHistory[tabHistory.length - 2] : "welcome";
       handleSetActiveTabState(newActiveTab);
+    }
+    if (tabId === "update log") {
+      localStorage.setItem("updateLogShown", "true");
     }
   };
 

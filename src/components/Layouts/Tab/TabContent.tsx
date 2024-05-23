@@ -4,6 +4,7 @@ import Resume from "../Resume";
 import Contact from "../Contact";
 import { App, IndexCSS, Welcome } from "../Content/Main";
 import { README } from "../Content/README";
+import { UpdateLog } from "../Content/UpdateLog";
 import { NotFound as NotFoundLayouts } from "../../../pages/404";
 
 import { ILoveTypeScript } from "../../../types";
@@ -31,6 +32,7 @@ const tabComponents: ILoveTypeScript = {
   resume: Resume,
   contact: Contact,
   readme: README,
+  ["update log"]: UpdateLog,
 };
 const TabContent: React.FC = () => {
   const { activeTab } = useTabContext();

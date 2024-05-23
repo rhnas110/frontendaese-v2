@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 import { AnimatePresence, Reorder } from "../../../utils/motion";
 
 import useShortcutKey from "../../../hooks/useShortcutKey";
@@ -12,7 +12,7 @@ const TabNavbar: React.FC = () => {
   const navbarRef = useRef<HTMLDivElement>(null);
 
   // Scroll to the active tab whenever it changes
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (navbarRef.current) {
       const activeTabElement = navbarRef.current.querySelector(
         `[data-tab-id="${activeTab}"]`
@@ -25,11 +25,12 @@ const TabNavbar: React.FC = () => {
       }
     }
   }, [activeTab]);
+  // Close tab shortcut
   useShortcutKey({
     modifierKeys: ["Alt"],
     keys: ["w"],
     action: () => {
-      const lastTab = tabs.length === 1 && activeTab === "welcome";
+      const lastTab = tabs.length === 1 || activeTab === "welcome";
       const tabIdToRemove = lastTab ? tabs[0].id : activeTab;
       if (tabs.length > 0) {
         removeTab(tabIdToRemove!);
@@ -46,7 +47,7 @@ const TabNavbar: React.FC = () => {
         ref={navbarRef}
         axis="x"
       >
-        <AnimatePresence>
+        <AnimatePresence initial={false}>
           {tabs?.map((tab: ILoveTypeScript) => (
             <Reorder.Item
               key={tab.id}
@@ -56,6 +57,7 @@ const TabNavbar: React.FC = () => {
               animate={{ opacity: 1, y: 0, transition: { duration: 0.25 } }}
               exit={{ opacity: 0, y: 35, transition: { duration: 0.3 } }}
               whileDrag={{ backgroundColor: "#262626" }}
+              layout
             >
               <TabItem tab={tab} />
             </Reorder.Item>

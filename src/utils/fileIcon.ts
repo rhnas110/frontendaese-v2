@@ -6,6 +6,8 @@ const JSONIcon =
   "https://raw.githubusercontent.com/vscode-icons/vscode-icons/79c370141fe104b4bdc85a5c3d0e21f2a98b12d5/icons/file_type_json.svg";
 const MDIcon =
   "https://raw.githubusercontent.com/vscode-icons/vscode-icons/79c370141fe104b4bdc85a5c3d0e21f2a98b12d5/icons/file_type_markdown.svg";
+const DefaultIcon =
+  "https://raw.githubusercontent.com/vscode-icons/vscode-icons/79c370141fe104b4bdc85a5c3d0e21f2a98b12d5/icons/default_file.svg";
 
 // Add file icons here
 const fileIcons: { [key: string]: string } = {
@@ -16,7 +18,16 @@ const fileIcons: { [key: string]: string } = {
   md: MDIcon,
 };
 
+// Default icon for tabs without a file extension or unknown file types
+const defaultFileIcons: { [key: string]: string } = {
+  ["Update Log"]:
+    "https://raw.githubusercontent.com/vscode-icons/vscode-icons/79c370141fe104b4bdc85a5c3d0e21f2a98b12d5/icons/default_file.svg",
+};
+
 export const getFileIcon = (filename: string): string => {
   const extension = filename.split(".").pop();
-  return extension && fileIcons[extension] ? fileIcons[extension] : "";
+  if (extension && fileIcons[extension]) {
+    return fileIcons[extension];
+  }
+  return defaultFileIcons[filename] || DefaultIcon;
 };
