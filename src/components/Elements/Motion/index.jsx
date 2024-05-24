@@ -1,36 +1,45 @@
+import { useState } from "react";
 import { motion } from "../../../utils/motion";
 import { cn } from "../../../utils";
 import { transition } from "../../../config/transition.config";
-import { useState } from "react";
 
-export const Motion = ({ children, className, ...props }) => {
+export const Motion = ({
+  section = false,
+  children,
+  className = "",
+  ...props
+}) => {
+  const Comp = section ? motion.section : motion.div;
+
   return (
-    <motion.div
+    <Comp
       {...props}
       transition={props.transition || transition}
       className={cn("w-full h-full", className)}
     >
       {children}
-    </motion.div>
+    </Comp>
   );
 };
 
 export const MotionInView = ({
+  section = false,
   once = false,
   amount = 0.5,
   children,
   className = "",
   ...props
 }) => {
+  const Comp = section ? motion.section : motion.div;
   return (
-    <motion.div
+    <Comp
       {...props}
       viewport={{ once, amount }}
       transition={props.transition || transition}
       className={cn("w-full h-full", className)}
     >
       {children}
-    </motion.div>
+    </Comp>
   );
 };
 

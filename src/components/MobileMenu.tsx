@@ -35,7 +35,7 @@ const MobileMenu = () => {
   const [isOpen, toggleOpen] = useCycle(false, true);
 
   return (
-    <motion.nav
+    <motion.div
       initial={false}
       animate={isOpen ? "open" : "closed"}
       custom={height}
@@ -54,7 +54,7 @@ const MobileMenu = () => {
         })}
       </motion.div>
       <MenuToggle toggle={toggleOpen} />
-    </motion.nav>
+    </motion.div>
   );
 };
 

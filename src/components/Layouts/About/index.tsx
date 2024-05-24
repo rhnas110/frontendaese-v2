@@ -5,7 +5,7 @@ import { MotionInView } from "../../Elements/Motion";
 
 const About = () => {
   return (
-    <div className="w-full px-2 pt-60">
+    <section className="w-full px-2 pt-60">
       <div className="flex justify-end mb-8">
         <MotionInView
           className="text-right sm:w-7/12"
@@ -39,7 +39,7 @@ const About = () => {
         <code>Tech stack:</code>
         <List list={skills} />
       </MotionInView>
-    </div>
+    </section>
   );
 };
 

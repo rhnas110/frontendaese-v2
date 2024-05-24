@@ -6,7 +6,7 @@ import NotFoundImage from "../assets/NotFound.png";
 export const NotFound: FC = () => {
   return (
     <Motion
-      className="flex items-center justify-center w-full h-screen px-2"
+      className="flex items-center justify-center h-screen px-2"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
     >

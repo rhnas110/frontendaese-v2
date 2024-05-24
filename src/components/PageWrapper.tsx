@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 
 import Sidebar from "./Sidebar";
+import Navbar from "./Navbar";
 import MarginWidthWrapper from "./MarginWidthWrapper";
 import { ModalSettings } from "./Layouts/Settings";
 
@@ -18,11 +19,12 @@ export default function PageWrapper({
   return (
     <>
       <div className="flex">
-        <div
+        <nav
           className={`fixed z-20 hidden h-full ${showSidebar && "lg:block"}`}
         >
           <Sidebar />
-        </div>
+        </nav>
+        <Navbar />
         <main className="flex-1 overflow-x-hidden">
           <MarginWidthWrapper>
             <div className={cn("flex flex-col flex-grow space-y-2", className)}>

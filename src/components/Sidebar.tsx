@@ -21,36 +21,34 @@ const Sidebar = () => {
   const { sidebarItems, collapseAllFolders } = useSidebarContext();
 
   return (
-    <nav className="flex h-full text-lg text-gray-400 bg-backgroundSecondary w-72">
-      <div className="relative w-full h-full">
-        <div className="flex items-center justify-between px-2 bg-[#424242]">
-          <h1 className="text-xl font-bold select-none">frontendaese</h1>
-          <div className="flex items-center justify-center gap-2">
-            <Tooltip content="Refresh">
-              <i
-                className="cursor-pointer"
-                onClick={() => window.location.reload()}
-              >
-                <RefreshIcon width={20} />
-              </i>
-            </Tooltip>
-            <Tooltip content="Collapse Folders">
-              <i className="cursor-pointer" onClick={collapseAllFolders}>
-                <MinusIcon width={20} />
-              </i>
-            </Tooltip>
-          </div>
+    <aside className="relative flex flex-col h-full text-lg text-gray-400 bg-backgroundSecondary w-72">
+      <section className="flex items-center justify-between px-2 bg-[#424242]">
+        <h1 className="text-xl font-bold select-none">frontendaese</h1>
+        <div className="flex items-center justify-center gap-2">
+          <Tooltip content="Refresh">
+            <i
+              className="cursor-pointer"
+              onClick={() => window.location.reload()}
+            >
+              <RefreshIcon width={20} />
+            </i>
+          </Tooltip>
+          <Tooltip content="Collapse Folders">
+            <i className="cursor-pointer" onClick={collapseAllFolders}>
+              <MinusIcon width={20} />
+            </i>
+          </Tooltip>
         </div>
-        <div className="overflow-y-auto h-5/6 scroll-smooth sidebar-scrollbar">
-          {sidebarItems.map((item, idx) => {
-            return <MenuItem key={idx} item={item} />;
-          })}
-        </div>
-        <div className="absolute w-full bottom-6">
-          <Social />
-        </div>
-      </div>
-    </nav>
+      </section>
+      <section className="overflow-y-auto h-5/6 scroll-smooth sidebar-scrollbar">
+        {sidebarItems.map((item, idx) => {
+          return <MenuItem key={idx} item={item} />;
+        })}
+      </section>
+      <section className="absolute w-full bottom-6">
+        <Social />
+      </section>
+    </aside>
   );
 };
 

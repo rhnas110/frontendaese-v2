@@ -5,7 +5,8 @@ import { FramerMagnetic, MotionInView } from "../../Elements/Motion";
 const Contact = () => {
   return (
     <MotionInView
-      className="w-full px-2 py-60"
+      section
+      className="px-2 py-60"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
     >

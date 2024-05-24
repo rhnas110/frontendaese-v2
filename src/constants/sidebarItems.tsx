@@ -90,7 +90,7 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
         ],
       },
       {
-        title: "App.ts",
+        title: "App.tsx",
       },
       {
         title: "index.css",

@@ -25,7 +25,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
 );
 `;
   return (
-    <div className="px-2 py-16">
+    <section className="px-2 py-16">
       <CodeBlock
         language="typescript"
         showLineNumbers
@@ -43,7 +43,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       >
         {codeString}
       </CodeBlock>
-    </div>
+    </section>
   );
 };
 export const IndexCSS = () => {
@@ -58,7 +58,7 @@ body {
 }
 `;
   return (
-    <div className="px-2 py-16">
+    <section className="px-2 py-16">
       <CodeBlock
         language="css"
         showLineNumbers
@@ -67,13 +67,14 @@ body {
       >
         {codeString}
       </CodeBlock>
-    </div>
+    </section>
   );
 };
 export const Welcome = () => {
   const { addTab } = useTabContext();
   return (
     <Motion
+      section
       className="flex flex-col items-center px-2 py-32 gap-y-4"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}

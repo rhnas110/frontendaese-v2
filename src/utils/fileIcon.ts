@@ -1,6 +1,10 @@
 import TSIcon from "../assets/icons/TSIcon.png";
 import JSIcon from "../assets/icons/JSIcon.png";
 
+const TSXIcon =
+  "https://raw.githubusercontent.com/vscode-icons/vscode-icons/79c370141fe104b4bdc85a5c3d0e21f2a98b12d5/icons/file_type_reactts.svg";
+const JSXIcon =
+  "https://raw.githubusercontent.com/vscode-icons/vscode-icons/79c370141fe104b4bdc85a5c3d0e21f2a98b12d5/icons/file_type_reactjs.svg";
 const CSSIcon = "https://img.icons8.com/fluency/48/css3.png";
 const JSONIcon =
   "https://raw.githubusercontent.com/vscode-icons/vscode-icons/79c370141fe104b4bdc85a5c3d0e21f2a98b12d5/icons/file_type_json.svg";
@@ -12,7 +16,9 @@ const DefaultIcon =
 // Add file icons here
 const fileIcons: { [key: string]: string } = {
   ts: TSIcon,
+  tsx: TSXIcon,
   js: JSIcon,
+  jsx: JSXIcon,
   css: CSSIcon,
   json: JSONIcon,
   md: MDIcon,

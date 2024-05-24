@@ -11,9 +11,9 @@ import { ILoveTypeScript } from "../../../types";
 import { useTabContext } from "../../../context/TabContext";
 
 const NotFound = () => (
-  <div className="[height:calc(100vh-1rem)] overflow-hidden">
+  <section className="[height:calc(100vh-1rem)] overflow-hidden">
     <NotFoundLayouts />
-  </div>
+  </section>
 );
 
 const tabComponents: ILoveTypeScript = {
