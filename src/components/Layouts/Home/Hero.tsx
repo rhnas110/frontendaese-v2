@@ -9,7 +9,7 @@ import { Cursor, useTypewriter } from "react-simple-typewriter";
 import JSIcon from "../../../assets/icons/JSIcon.png";
 import { Image } from "../../Elements/Image";
 import { Motion } from "../../Elements/Motion";
-import { CodeBlock } from "../../Elements/CodeBlock";
+import { Highlighter } from "../../Elements/Highlighter";
 import { MobileXs } from "../../../utils/screen";
 import { randomIntFromInterval } from "../../../utils";
 
@@ -70,7 +70,7 @@ function Hero() {
             />
             <code>profile.js</code>
           </div>
-          <CodeBlock
+          <Highlighter
             language="javascript"
             style={style}
             customStyle={{
@@ -83,7 +83,7 @@ function Hero() {
             wrapLongLines={MobileXs}
           >
             {code}
-          </CodeBlock>
+          </Highlighter>
         </div>
       </div>
       <div className="mt-8">

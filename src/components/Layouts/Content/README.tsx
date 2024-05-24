@@ -1,6 +1,6 @@
 import { anOldHope } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import { useTabContext } from "../../../context/TabContext";
-import { CodeBlock } from "../../Elements/CodeBlock";
+import { Highlighter } from "../../Elements/Highlighter";
 import { Image } from "../../Elements/Image";
 import { Motion, MotionInView } from "../../Elements/Motion";
 
@@ -77,7 +77,7 @@ export const README = () => {
       >
         <h2 className="text-2xl font-bold text-gray-300">Getting Started</h2>
         <hr className="h-px mt-2 mb-4 border-0 rounded opacity-75 bg-gradient-to-r from-neutral-500 via-transparent to-transparent" />
-        <CodeBlock
+        <Highlighter
           language="bash"
           style={anOldHope}
           lineProps={() => ({
@@ -97,7 +97,7 @@ export const README = () => {
           wrapLines
         >
           {"cd ./src/pages/Home"}
-        </CodeBlock>
+        </Highlighter>
       </MotionInView>
       <h2 className="text-2xl font-bold text-center text-gray-300">
         Enjoy the exploration!

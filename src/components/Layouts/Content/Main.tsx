@@ -2,7 +2,7 @@ import { anOldHope } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import { Kbd } from "../../_ui/Kbd";
 import { Image } from "../../Elements/Image";
 import { Motion } from "../../Elements/Motion";
-import { CodeBlock } from "../../Elements/CodeBlock";
+import { Highlighter } from "../../Elements/Highlighter";
 
 import { useTabContext } from "../../../context/TabContext";
 import VSCode from "../../../assets/VSCode.png";
@@ -26,7 +26,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
 `;
   return (
     <section className="px-2 py-16">
-      <CodeBlock
+      <Highlighter
         language="typescript"
         showLineNumbers
         style={anOldHope}
@@ -42,7 +42,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         wrapLines
       >
         {codeString}
-      </CodeBlock>
+      </Highlighter>
     </section>
   );
 };
@@ -59,14 +59,14 @@ body {
 `;
   return (
     <section className="px-2 py-16">
-      <CodeBlock
+      <Highlighter
         language="css"
         showLineNumbers
         style={anOldHope}
         customStyle={{ background: "transparent" }}
       >
         {codeString}
-      </CodeBlock>
+      </Highlighter>
     </section>
   );
 };
