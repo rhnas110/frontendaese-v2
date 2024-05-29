@@ -133,3 +133,69 @@ If you want to help, you can type 'donate'.`;
 export const date = async (): Promise<string> => {
   return new Date().toString();
 };
+
+// Info
+export const info = async (args: string[]): Promise<string> => {
+  if (args.length == 0)
+    return `To use 'info', please provide a command, example: 'info loker'`;
+  args[0] = args[0].toLowerCase();
+
+  switch (args[0]) {
+    case "help":
+      return "help -- show all commands.";
+    case "about":
+      return "about -- show information about me.";
+    case "repo":
+      return "repo -- open my github repository.";
+    case "resume":
+      return "resume -- open my resume.";
+    case "email":
+      return "email -- open my email.";
+    case "github":
+      return "github -- open my github.";
+    case "linkedin":
+      return "linkedin -- open my linkedin.";
+    case "clear":
+      return "clear -- clear the terminal.";
+    case "exit":
+      return "exit -- exit the terminal.";
+    case "donate":
+      return "donate -- to support me and buy me a coffee.";
+    case "google":
+      return "google -- search google.";
+    case "duckduckgo":
+      return "duckduckgo -- search duckduckgo.";
+    case "bing":
+      return "bing -- search bing.";
+    case "reddit":
+      return "reddit -- search reddit.";
+    case "echo":
+      return "echo -- masuk pak echo.";
+    case "sudo":
+      return "sudo -- please dont try this.";
+    case "ls":
+      return "ls -- simple list.";
+    case "whoami":
+      return "whoami -- show who you are.";
+    case "cd":
+      return "cd -- this command is unfinished.";
+    case "date":
+      return "date -- show the current date and time.";
+    case "btc":
+      return "btc -- get btc price.";
+    case "eth":
+      return "eth -- get eth price.";
+    case "projects":
+      return "projects -- get projects.";
+    case "readme":
+      return "readme -- get readme.";
+    case "quote":
+      return "quote -- get quote.";
+    case "loker":
+      return `<img src="https://static.vecteezy.com/system/resources/previews/010/258/755/original/lockers-3d-illustration-png.png" alt="loker" loading="lazy" class="object-cover object-center w-48 select-none"/>`;
+    case "info":
+      return `<img src="https://media1.tenor.com/m/kfc5GCtMIaEAAAAC/whaaaaat-what-do-you-mean.gif" alt="info" loading="lazy" class="object-cover object-center w-48 select-none rounded-full"/>`;
+    default:
+      return `info ${args[0]} -- command not found.`;
+  }
+};
