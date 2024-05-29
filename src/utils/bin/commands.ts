@@ -173,7 +173,7 @@ export const info = async (args: string[]): Promise<string> => {
     case "whoami":
       return "whoami -- show who you are.";
     case "cd":
-      return "cd -- this command is unfinished.";
+      return "cd -- change directory.";
     case "date":
       return "date -- show the current date and time.";
     case "btc":

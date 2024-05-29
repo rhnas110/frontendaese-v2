@@ -23,7 +23,7 @@ export const shell = async (
     const file = args[1]?.toLowerCase();
 
     if (!file) {
-      setHistory("please provide a directory, example: 'cd home'");
+      setHistory("please provide a file or directory, example: 'cd home'");
       setCommand("");
       return;
     }
