@@ -1,5 +1,15 @@
 export const updateLog = [
   {
+    version: "1.0.6",
+    description: "Introduced a Terminal feature with essential commands.",
+    details: [
+      "Added a Terminal to the app.",
+      "Implemented key commands such as help, clear, exit, echo, ls, sudo, about, readme, and more.",
+      "Toggle the Terminal open/close with the keyboard shortcut Ctrl/⌘ + `.",
+      "Use the help command to explore all available commands.",
+    ],
+  },
+  {
     version: "1.0.5",
     description: "Enhanced content presentation.",
     details: [
