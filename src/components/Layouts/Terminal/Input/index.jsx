@@ -1,3 +1,4 @@
+import { useTabContext } from "../../../../context/TabContext";
 import useShortcutKey from "../../../../hooks/useShortcutKey";
 import { commandExists } from "../../../../utils/commandExists";
 import { shell } from "../../../../utils/shell";
@@ -17,6 +18,8 @@ export const Input = ({
   clearHistory,
   setTerminalOpen,
 }) => {
+  const { addTab } = useTabContext();
+
   useShortcutKey({
     modifierKeys: ["Control"],
     keys: ["c"],
@@ -50,7 +53,8 @@ export const Input = ({
         setHistory,
         clearHistory,
         setCommand,
-        setTerminalOpen
+        setTerminalOpen,
+        addTab
       );
       containerInputRef.current.scrollTo(
         0,

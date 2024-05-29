@@ -125,11 +125,6 @@ export const whoami = async (): Promise<string> => {
   return `Aku siapa? Who am I?`;
 };
 
-export const cd = async (): Promise<string> => {
-  return `Unfortunately, this feature is still unfinished.
-If you want to help, you can type 'donate'.`;
-};
-
 export const date = async (): Promise<string> => {
   return new Date().toString();
 };
