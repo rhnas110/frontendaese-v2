@@ -14,6 +14,10 @@ const hotkeys = [
     key: "Ctrl/⌘ + b",
   },
   {
+    name: "Open Terminal",
+    key: "Ctrl/⌘ + `",
+  },
+  {
     name: "Close Tab",
     key: "Alt + w",
   },

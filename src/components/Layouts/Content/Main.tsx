@@ -101,10 +101,14 @@ export const Welcome = () => {
         </div>
       </div>
 
-      <div className="w-full max-w-xs text-gray-400">
+      <div className="flex flex-col w-full max-w-xs text-gray-400 gap-y-1">
         <div className="flex items-center justify-between text-base">
           <p>Open Settings</p>
           <Kbd>Ctrl/⌘ + .</Kbd>
+        </div>
+        <div className="flex items-center justify-between text-base">
+          <p>Open Terminal</p>
+          <Kbd>Ctrl/⌘ + `</Kbd>
         </div>
       </div>
     </Motion>
