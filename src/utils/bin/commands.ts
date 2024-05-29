@@ -133,11 +133,11 @@ export const date = async (): Promise<string> => {
 export const info = async (args: string[]): Promise<string> => {
   if (args.length == 0)
     return `To use 'info', please provide a command, example: 'info loker'`;
-  args[0] = args[0].toLowerCase();
 
-  switch (args[0]) {
+  const command = args[0].toLowerCase();
+  switch (command) {
     case "help":
-      return "help -- show all commands.";
+      return "help -- show all available commands.";
     case "about":
       return "about -- show information about me.";
     case "repo":
@@ -155,7 +155,7 @@ export const info = async (args: string[]): Promise<string> => {
     case "exit":
       return "exit -- exit the terminal.";
     case "donate":
-      return "donate -- to support me and buy me a coffee.";
+      return "donate -- to support me by buying me a coffee, thanks!";
     case "google":
       return "google -- search google.";
     case "duckduckgo":
