@@ -14,7 +14,7 @@ Type 'repo' or click <a class="underline" href="${config.repo}" target="_blank">
 
 // Help
 export const help = async (): Promise<string> => {
-  const commands = Object.keys(bin)
+  const commands = ["cd", ...Object.keys(bin)]
     .filter((command) => command !== "started")
     .sort();
   let c = "";
