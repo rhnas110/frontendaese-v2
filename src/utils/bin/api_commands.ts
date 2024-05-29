@@ -1,8 +1,7 @@
 // List of commands that require API calls
 
-import { getProjects } from "../api";
-import { getQuote } from "../api";
-import { getReadme } from "../api";
+import { getProjects, getQuote, getReadme, getCryptoPrice } from "../api";
+import { rupiah } from "../currency";
 
 export const projects = async (): Promise<string> => {
   const projects: [{ name: string; html_url: string }] = await getProjects();
@@ -28,4 +27,25 @@ export const quote = async (): Promise<string> => {
   const data = await getQuote();
   if (!data) return "Failed to fetch quote";
   return data.quote;
+};
+
+export const btc = async (): Promise<string> => {
+  const data = await getCryptoPrice({});
+  if (!data) return "Failed to fetch BTC price";
+  return `Get BTC price...\n
+$${data.USD}
+${rupiah(data.IDR)}
+  
+Disclaimer: This data was produced from min-api.cryptocompare.com Bitcoin Price Index.
+`;
+};
+export const eth = async (): Promise<string> => {
+  const data = await getCryptoPrice({ coins: "ETH" });
+  if (!data) return "Failed to fetch ETH price";
+  return `Get ETH price...\n
+$${data.USD}
+${rupiah(data.IDR)}
+  
+Disclaimer: This data was produced from min-api.cryptocompare.com Ethereum Price Index.
+`;
 };
