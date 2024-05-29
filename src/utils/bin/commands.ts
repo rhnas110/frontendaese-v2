@@ -26,7 +26,7 @@ export const help = async (): Promise<string> => {
     }
   }
   return `Here are all the available commands:
-\n${c}
+\n${c}\n
 [tab]: trigger completion.
 [ctrl+l]/clear: clear terminal.
 [exit]: exit terminal.\n
