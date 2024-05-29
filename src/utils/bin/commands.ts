@@ -103,7 +103,7 @@ export const echo = async (args: string[]): Promise<string> => {
 
 export const sudo = async (): Promise<string> => {
   window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank");
-  return `Access denied: Nice try!`;
+  return `Access denied: Nice try! Please forgive me.`;
 };
 
 export const ls = async (): Promise<string> => {

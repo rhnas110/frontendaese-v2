@@ -19,7 +19,7 @@ export const readme = async (): Promise<string> => {
   const readme = await getReadme();
   if (!readme) return "Failed to fetch readme";
   const customReadme = `\n\nHi there, I am As 👋 
-I'm a full stuck developer. Who loves to work with ultramodern technologies. My goal is to give value to the large community of developers.`;
+I'm a full stuck developer.`;
   return `Opening GitHub README...${customReadme}`;
 };
 
