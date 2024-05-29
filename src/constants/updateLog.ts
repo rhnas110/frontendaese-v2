@@ -1,5 +1,13 @@
 export const updateLog = [
   {
+    version: "1.0.7",
+    description: "Enhanced Terminal with new commands.",
+    details: [
+      "Added info command for command descriptions (e.g., info help).",
+      "Introduced cd command to open files/tabs (e.g., cd home).",
+    ],
+  },
+  {
     version: "1.0.6",
     description: "Introduced a Terminal feature with essential commands.",
     details: [
