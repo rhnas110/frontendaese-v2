@@ -4,6 +4,7 @@ import Sidebar from "./Sidebar";
 import Navbar from "./Navbar";
 import MarginWidthWrapper from "./MarginWidthWrapper";
 import { ModalSettings } from "./Layouts/Settings";
+import { Terminal } from "./Layouts/Terminal";
 
 import { cn } from "../utils";
 import { useKeyShortcut } from "../context/KeyShortcutContext";
@@ -29,6 +30,7 @@ export default function PageWrapper({
           <MarginWidthWrapper>
             <div className={cn("flex flex-col flex-grow space-y-2", className)}>
               {children}
+              <Terminal />
             </div>
           </MarginWidthWrapper>
           <ModalSettings />

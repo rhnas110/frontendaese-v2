@@ -8,6 +8,8 @@ export const Tooltip = ({
   className,
   withArrow,
   arrowClassName,
+  side = "bottom",
+  align = "center",
   open,
   defaultOpen,
   onOpenChange,
@@ -18,6 +20,8 @@ export const Tooltip = ({
   className?: string;
   withArrow?: boolean;
   arrowClassName?: string;
+  side?: "top" | "bottom" | "left" | "right";
+  align?: "start" | "center" | "end";
   open?: boolean;
   defaultOpen?: boolean;
   onOpenChange?: (open: boolean) => void;
@@ -32,8 +36,8 @@ export const Tooltip = ({
       >
         <TooltipPrimitive.Trigger asChild>{children}</TooltipPrimitive.Trigger>
         <TooltipPrimitive.Content
-          side="bottom"
-          align="center"
+          side={side}
+          align={align}
           {...props}
           className={cn(
             "px-2 flex items-center justify-center border bg-background/50 border-backgroundSecondary rounded-sm text-base",

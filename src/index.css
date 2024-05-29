@@ -36,24 +36,28 @@ body::-webkit-scrollbar-thumb {
     height: 5px;
 }
 
-.sidebar-scrollbar::-webkit-scrollbar {
+.sidebar-scrollbar::-webkit-scrollbar,
+.terminal-scrollbar::-webkit-scrollbar {
     width: 5px;
 }
 
 .tab-navbar-scrollbar::-webkit-scrollbar-thumb,
-.sidebar-scrollbar::-webkit-scrollbar-thumb {
+.sidebar-scrollbar::-webkit-scrollbar-thumb,
+.terminal-scrollbar::-webkit-scrollbar-thumb {
     background: var(--sb-thumb-color);
 }
 
 .tab-navbar-scrollbar::-webkit-scrollbar-track,
-.sidebar-scrollbar::-webkit-scrollbar-track {
+.sidebar-scrollbar::-webkit-scrollbar-track,
+.terminal-scrollbar::-webkit-scrollbar-track {
     background: var(--sb-track-color);
 }
 
 @supports not selector(::-webkit-scrollbar) {
 
     .tab-navbar-scrollbar,
-    .sidebar-scrollbar {
+    .sidebar-scrollbar,
+    .terminal-scrollbar {
         scrollbar-color: theme(colors.green_vs) var(--sb-track-color);
     }
 }

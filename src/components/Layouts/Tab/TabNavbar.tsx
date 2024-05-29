@@ -3,11 +3,14 @@ import { AnimatePresence, Reorder } from "../../../utils/motion";
 
 import useShortcutKey from "../../../hooks/useShortcutKey";
 import { useTabContext } from "../../../context/TabContext";
+import { useKeyShortcut } from "../../../context/KeyShortcutContext";
 import { ILoveTypeScript } from "../../../types";
 import TabItem from "./TabItem";
+import { cn } from "../../../utils";
 
 const TabNavbar: React.FC = () => {
   const { tabs, activeTab, removeTab, setTabs } = useTabContext();
+  const { showSidebar } = useKeyShortcut();
 
   const navbarRef = useRef<HTMLDivElement>(null);
 
@@ -43,7 +46,13 @@ const TabNavbar: React.FC = () => {
       <Reorder.Group
         values={tabs}
         onReorder={setTabs}
-        className="flex w-[81.5%] h-full overflow-x-auto tab-navbar-scrollbar overflow-y-hidden"
+        className={cn(
+          "flex h-full overflow-x-auto tab-navbar-scrollbar overflow-y-hidden",
+          {
+            "w-full": !showSidebar,
+            "[width:calc(100%_-_288px)]": showSidebar,
+          }
+        )}
         ref={navbarRef}
         axis="x"
       >
