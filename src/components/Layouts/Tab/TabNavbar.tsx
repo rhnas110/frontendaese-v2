@@ -1,4 +1,5 @@
 import { useLayoutEffect, useRef } from "react";
+import { cn } from "../../../utils";
 import { AnimatePresence, Reorder } from "../../../utils/motion";
 
 import useShortcutKey from "../../../hooks/useShortcutKey";
@@ -6,7 +7,6 @@ import { useTabContext } from "../../../context/TabContext";
 import { useKeyShortcut } from "../../../context/KeyShortcutContext";
 import { ILoveTypeScript } from "../../../types";
 import TabItem from "./TabItem";
-import { cn } from "../../../utils";
 
 const TabNavbar: React.FC = () => {
   const { tabs, activeTab, removeTab, setTabs } = useTabContext();
