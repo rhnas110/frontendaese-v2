@@ -1,6 +1,8 @@
 // List of commands that require API calls
 
-import { getProjects, getQuote, getReadme, getCryptoPrice } from "../api";
+import { getCryptoPrice } from "../../vendor/api/crypto";
+import { getProjects, getReadme } from "../../vendor/api/github";
+import { getQuote } from "../../vendor/api/quote";
 import { rupiah } from "../currency";
 
 export const projects = async (): Promise<string> => {
