@@ -187,9 +187,9 @@ export const info = async (args: string[]): Promise<string> => {
     case "quote":
       return "quote -- get quote.";
     case "loker":
-      return `<img src="https://static.vecteezy.com/system/resources/previews/010/258/755/original/lockers-3d-illustration-png.png" alt="loker" loading="lazy" class="object-cover object-center w-48 select-none"/>`;
+      return `<img src="https://static.vecteezy.com/system/resources/previews/010/258/755/original/lockers-3d-illustration-png.png" alt="loker" loading="lazy" class="object-cover object-center w-48 select-none cursor-default"/>`;
     case "info":
-      return `<img src="https://media1.tenor.com/m/kfc5GCtMIaEAAAAC/whaaaaat-what-do-you-mean.gif" alt="info" loading="lazy" class="object-cover object-center w-48 select-none rounded-full"/>`;
+      return `<img src="https://media1.tenor.com/m/kfc5GCtMIaEAAAAC/whaaaaat-what-do-you-mean.gif" alt="info" loading="lazy" class="object-cover object-center w-48 select-none rounded-full cursor-default"/>`;
     case "waifu":
       return `<img src="https://media1.tenor.com/m/GBdIH5sL4XQAAAAC/the-rock-rock.gif" alt="waifu" loading="lazy" class="object-cover object-center w-48 select-none rounded-full saturate-0 hover:saturate-100 transition duration-300 cursor-default"/>`;
     default:
