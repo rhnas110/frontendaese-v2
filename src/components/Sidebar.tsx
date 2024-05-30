@@ -125,7 +125,9 @@ const MenuItem: React.FC<{ item: SideNavItem }> = ({ item }) => {
                     className="w-5 h-5 bg-transparent"
                   />
                 )}
-                <p className="text-xl font-semibold">{item.title}</p>
+                <Tooltip content={item?.fullTitle || item.title}>
+                  <p className="text-xl font-semibold">{item.title}</p>
+                </Tooltip>
               </div>
             </div>
           </button>
@@ -153,7 +155,9 @@ const MenuItem: React.FC<{ item: SideNavItem }> = ({ item }) => {
               lazy
             />
           </div>
-          <span className="flex text-xl font-semibold">{item.title}</span>
+          <Tooltip content={item?.fullTitle || item.title}>
+            <span className="flex text-xl font-semibold">{item.title}</span>
+          </Tooltip>
         </a>
       ) : (
         <div
@@ -174,7 +178,9 @@ const MenuItem: React.FC<{ item: SideNavItem }> = ({ item }) => {
               />
             )}
           </div>
-          <span className="flex text-xl font-semibold">{item.title}</span>
+          <Tooltip content={item?.fullTitle || item.title}>
+            <span className="flex text-xl font-semibold">{item.title}</span>
+          </Tooltip>
         </div>
       )}
     </div>

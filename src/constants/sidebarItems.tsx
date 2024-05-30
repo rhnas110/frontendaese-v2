@@ -4,6 +4,7 @@ import { GlobeAltIcon } from "@heroicons/react/solid";
 
 const WEB: {
   title: string;
+  fullTitle?: string;
   url?: string;
   image?: string;
 }[] = [
@@ -34,6 +35,7 @@ const WEB: {
   },
   {
     title: "MOKOMDO",
+    fullTitle: "Multi Warehouse E-Commerce | MOKOMDO",
     url: "https://jcwd220405.purwadhikabootcamp.com/",
     image: "https://jcwd220405.purwadhikabootcamp.com/mokomdo-logo.png",
   },

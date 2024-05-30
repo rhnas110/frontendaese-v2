@@ -1,5 +1,6 @@
 export type SideNavItem = {
   title: string;
+  fullTitle?: string;
   url?: string;
   icon?: JSX.Element;
   image?: string; // this just for single image
