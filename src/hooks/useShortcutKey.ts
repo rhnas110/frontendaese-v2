@@ -2,24 +2,34 @@ import { useEffect } from "react";
 import { Desktop } from "../utils/screen";
 
 interface ShortcutKeyOptions {
-  modifierKeys: string[];
+  modifierKeys?: string[];
   keys: string[];
   action: () => void;
 }
 
-const useShortcutKey = ({ modifierKeys, keys, action }: ShortcutKeyOptions) => {
+const useShortcutKey = ({
+  modifierKeys = [],
+  keys,
+  action,
+}: ShortcutKeyOptions) => {
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
-      const isModifierKeyPressed = modifierKeys.some(
+      const isModifierKeyPressed = modifierKeys.every(
         (key) =>
           (key === "Control" && (e.metaKey || e.ctrlKey)) ||
-          (e.altKey && key === "Alt") ||
-          (e.shiftKey && key === "Shift")
+          (key === "Alt" && e.altKey) ||
+          (key === "Shift" && e.shiftKey)
       );
 
       const isKeyPressed = keys.includes(e.key.toLowerCase());
 
       if (isModifierKeyPressed && isKeyPressed) {
+        e.preventDefault();
+        if (Desktop) action();
+      } else if (
+        keys.includes(e.key.toLowerCase()) &&
+        modifierKeys.length === 0
+      ) {
         e.preventDefault();
         if (Desktop) action();
       }
