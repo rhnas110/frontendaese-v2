@@ -44,6 +44,7 @@ Selamat datang di **frontendaese**, sebuah situs web portofolio pribadi yang dir
 
 - **Antarmuka Seperti IDE**: Dirancang untuk berfungsi seperti lingkungan pengembangan terpadu (IDE), terutama Visual Studio Code, memberikan pengalaman pengguna yang intuitif dan familiar.
 - **Navigasi Berbasis Tab**: Menampilkan sistem navigasi berbasis tab yang dinamis di mana tab dapat dengan mudah ditambahkan, ditutup, dan diatur ulang melalui interaksi seret dan lepas.
+- **Terminal**: Terminal dengan perintah penting seperti `help`, `clear`, `exit`, `echo`, `ls`, `sudo`, `about`, `readme`, `repo`, dan lainnya. Terminal dapat diaktifkan buka/tutup menggunakan pintasan keyboard Ctrl/⌘ + `.
 
 ## Lisensi
 

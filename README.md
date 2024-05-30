@@ -44,6 +44,7 @@ Welcome to **frontendaese**, a personal portfolio website designed to showcase m
 
 - **IDE-like Interface**: Designed to act like an integrated development environment (IDE), especially Visual Studio Code, providing an intuitive and familiar user experience.
 - **Tabbed Navigation**: Features a dynamic tabbed navigation system where tabs can be easily added, closed, and reordered through drag-and-drop interactions.
+- **Terminal**: Terminal with essential commands such as `help`, `clear`, `exit`, `echo`, `ls`, `sudo`, `about`, `readme`, `repo`, and more. The Terminal can be toggled open/close using the keyboard shortcut Ctrl/⌘ + `.
 
 ## License
 
