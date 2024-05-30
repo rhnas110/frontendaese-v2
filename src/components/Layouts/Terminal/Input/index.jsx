@@ -1,8 +1,8 @@
 import { useTabContext } from "../../../../context/TabContext";
 import useShortcutKey from "../../../../hooks/useShortcutKey";
-import { commandExists } from "../../../../utils/commandExists";
 import { shell } from "../../../../utils/shell";
-import { handleTabCompletion } from "../../../../utils/tabCompletion";
+import { commandExists } from "../../../../utils/bin/commandExists";
+import { handleTabCompletion } from "../../../../utils/bin/tabCompletion";
 
 import { Label } from "./Label";
 

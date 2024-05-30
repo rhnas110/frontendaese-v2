@@ -1,4 +1,4 @@
-import * as bin from "./bin";
+import * as bin from ".";
 
 export const handleTabCompletion = (
   command: string,

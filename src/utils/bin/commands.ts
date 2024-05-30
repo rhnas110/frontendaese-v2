@@ -1,7 +1,7 @@
 // List of commands that do not require API calls
 
-import * as bin from "./index";
 import config from "../../constants/data.json";
+import { listCommands } from "./utils";
 
 // Initial when opening the terminal
 export const started = (): string => {
@@ -14,19 +14,9 @@ Type 'repo' or click <a class="underline" href="${config.repo}" target="_blank">
 
 // Help
 export const help = async (): Promise<string> => {
-  const commands = ["cd", ...Object.keys(bin)]
-    .filter((command) => command !== "started")
-    .sort();
-  let c = "";
-  for (let i = 1; i <= commands.length; i++) {
-    if (i % 7 === 0) {
-      c += commands[i - 1] + "\n";
-    } else {
-      c += commands[i - 1] + " ";
-    }
-  }
+  const { list } = listCommands();
   return `Here are all the available commands:
-\n${c}\n
+\n${list}\n
 [tab]: trigger completion.
 [ctrl+l]/clear: clear terminal.
 [exit]: exit terminal.\n
@@ -127,72 +117,4 @@ export const whoami = async (): Promise<string> => {
 
 export const date = async (): Promise<string> => {
   return new Date().toString();
-};
-
-// Info
-export const info = async (args: string[]): Promise<string> => {
-  if (args.length == 0)
-    return `To use 'info', please provide a command, example: 'info loker'`;
-
-  const command = args[0].toLowerCase();
-  switch (command) {
-    case "help":
-      return "help -- show all available commands.";
-    case "about":
-      return "about -- show information about me.";
-    case "repo":
-      return "repo -- open my github repository.";
-    case "resume":
-      return "resume -- open my resume.";
-    case "email":
-      return "email -- open my email.";
-    case "github":
-      return "github -- open my github.";
-    case "linkedin":
-      return "linkedin -- open my linkedin.";
-    case "clear":
-      return "clear -- clear the terminal.";
-    case "exit":
-      return "exit -- exit the terminal.";
-    case "donate":
-      return "donate -- to support me by buying me a coffee, thanks!";
-    case "google":
-      return "google -- search google.";
-    case "duckduckgo":
-      return "duckduckgo -- search duckduckgo.";
-    case "bing":
-      return "bing -- search bing.";
-    case "reddit":
-      return "reddit -- search reddit.";
-    case "echo":
-      return "echo -- masuk pak echo.";
-    case "sudo":
-      return "sudo -- please dont try this.";
-    case "ls":
-      return "ls -- simple list.";
-    case "whoami":
-      return "whoami -- show who you are.";
-    case "cd":
-      return "cd -- change directory.";
-    case "date":
-      return "date -- show the current date and time.";
-    case "btc":
-      return "btc -- get btc price.";
-    case "eth":
-      return "eth -- get eth price.";
-    case "projects":
-      return "projects -- get projects.";
-    case "readme":
-      return "readme -- get readme.";
-    case "quote":
-      return "quote -- get quote.";
-    case "loker":
-      return `<img src="https://static.vecteezy.com/system/resources/previews/010/258/755/original/lockers-3d-illustration-png.png" alt="loker" loading="lazy" class="object-cover object-center w-48 select-none cursor-default"/>`;
-    case "info":
-      return `<img src="https://media1.tenor.com/m/kfc5GCtMIaEAAAAC/whaaaaat-what-do-you-mean.gif" alt="info" loading="lazy" class="object-cover object-center w-48 select-none rounded-full cursor-default"/>`;
-    case "waifu":
-      return `<img src="https://media1.tenor.com/m/GBdIH5sL4XQAAAAC/the-rock-rock.gif" alt="waifu" loading="lazy" class="object-cover object-center w-48 select-none rounded-full saturate-0 hover:saturate-100 transition duration-300 cursor-default"/>`;
-    default:
-      return `info ${args[0]} -- command not found.`;
-  }
 };
