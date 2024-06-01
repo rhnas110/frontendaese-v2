@@ -106,9 +106,9 @@ suka
 javascript
 karena
 aku
-anak
-buah
-bang theo`;
+anak buah
+bang theo
+bercanda pak`;
 };
 
 export const whoami = async (): Promise<string> => {
