@@ -6,7 +6,7 @@ const Resume = () => {
   return (
     <MotionInView
       section
-      className="px-2 pt-60"
+      className="px-2 pt-60 md:px-4"
       initial={{ opacity: 0, x: -25 }}
       whileInView={{ opacity: 1, x: 0 }}
       once

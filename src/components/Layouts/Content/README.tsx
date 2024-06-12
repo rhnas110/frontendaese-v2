@@ -7,7 +7,7 @@ import { Motion, MotionInView } from "../../Elements/Motion";
 export const README = () => {
   const { addTab } = useTabContext();
   return (
-    <section className="flex flex-col px-2 py-32 lg:px-4 gap-y-8">
+    <section className="flex flex-col px-2 py-32 md:px-4 gap-y-8">
       <Motion
         className="text-center"
         initial={{ opacity: 0 }}

@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <MotionInView
       section
-      className="px-2 py-60"
+      className="px-2 py-60 md:px-4"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
     >
