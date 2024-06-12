@@ -37,7 +37,7 @@ const WEB: {
     title: "MOKOMDO",
     fullTitle: "Multi Warehouse E-Commerce | MOKOMDO",
     url: "https://jcwd220405.purwadhikabootcamp.com/",
-    image: "https://jcwd220405.purwadhikabootcamp.com/mokomdo-logo.png",
+    image: "https://abangkuh.de/assets/mokomdo.png",
   },
 ];
 
