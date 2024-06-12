@@ -49,8 +49,8 @@ const TabNavbar: React.FC = () => {
         className={cn(
           "flex h-full overflow-x-auto tab-navbar-scrollbar overflow-y-hidden",
           {
-            "w-full": !showSidebar,
-            "[width:calc(100%_-_288px)]": showSidebar,
+            "w-[calc(100%_-_3rem)]": !showSidebar,
+            "[width:calc(100%_-_288px_-_3rem)]": showSidebar,
           }
         )}
         ref={navbarRef}

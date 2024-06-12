@@ -46,8 +46,8 @@ export const Terminal: FC = () => {
     <div className="overflow-y-hidden hidden border-t border-l border-[#424242] bg-backgroundSecondary h-[40vh] z-20 fixed bottom-0 w-full px-4 py-2 overflow-x-hidden lg:flex">
       <div
         className={cn("flex flex-col gap-y-2", {
-          "w-full": !showSidebar,
-          "[width:calc(100%_-_288px)]": showSidebar,
+          "w-[calc(100%_-_3rem)]": !showSidebar,
+          "[width:calc(100%_-_288px_-_3rem)]": showSidebar,
         })}
       >
         <Navbar setTerminalOpen={setTerminalOpen} />

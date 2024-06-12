@@ -13,9 +13,9 @@ export default function MarginWidthWrapper({
   return (
     <div
       className={cn(
-        "flex flex-col min-h-screen lg:ml-72",
+        "flex flex-col min-h-screen lg:ml-[calc(288px+3rem)]",
         className,
-        !showSidebar && "lg:ml-0"
+        !showSidebar && "lg:ml-12"
       )}
     >
       {children}

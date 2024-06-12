@@ -16,12 +16,18 @@ import { cn } from "../utils";
 import { getFileIcon } from "../utils/fileIcon";
 import { useTabContext } from "../context/TabContext";
 import { useSidebarContext } from "../context/SidebarContext";
+import { useKeyShortcut } from "../context/KeyShortcutContext";
 
 const Sidebar = () => {
   const { sidebarItems, collapseAllFolders } = useSidebarContext();
+  const { showSidebar } = useKeyShortcut();
 
   return (
-    <aside className="relative flex flex-col h-full text-lg text-gray-400 bg-backgroundSecondary w-72">
+    <aside
+      className={`relative flex flex-col h-full text-lg text-gray-400 bg-backgroundSecondary w-72 ${
+        !showSidebar && "hidden"
+      }`}
+    >
       <section className="flex items-center justify-between px-2 bg-[#424242]">
         <h1 className="text-xl font-bold select-none">frontendaese</h1>
         <div className="flex items-center justify-center gap-2">

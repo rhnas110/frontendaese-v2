@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 
+import { Leftbar } from "./Leftbar";
 import Sidebar from "./Sidebar";
 import Navbar from "./Navbar";
 import MarginWidthWrapper from "./MarginWidthWrapper";
@@ -7,7 +8,6 @@ import { ModalSettings } from "./Layouts/Settings";
 import { Terminal } from "./Layouts/Terminal";
 
 import { cn } from "../utils";
-import { useKeyShortcut } from "../context/KeyShortcutContext";
 
 export default function PageWrapper({
   children,
@@ -16,13 +16,11 @@ export default function PageWrapper({
   children: ReactNode;
   className?: string;
 }) {
-  const { showSidebar } = useKeyShortcut();
   return (
     <>
       <div className="flex">
-        <nav
-          className={`fixed z-20 hidden h-full ${showSidebar && "lg:block"}`}
-        >
+        <nav className="fixed z-20 hidden h-full lg:flex">
+          <Leftbar />
           <Sidebar />
         </nav>
         <Navbar />

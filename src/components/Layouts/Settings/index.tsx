@@ -1,8 +1,7 @@
-import { useState } from "react";
 import Modal from "../../_ui/Modal";
 import { Kbd } from "../../_ui/Kbd";
 import { DarkMode } from "../../Elements/Button/DarkMode";
-import useShortcutKey from "../../../hooks/useShortcutKey";
+import { useKeyShortcut } from "../../../context/KeyShortcutContext";
 
 const hotkeys = [
   {
@@ -24,16 +23,11 @@ const hotkeys = [
 ];
 
 export const ModalSettings = () => {
-  const [open, setOpen] = useState(false);
+  const { settingsOpen: open, setSettingsOpen } = useKeyShortcut();
 
   function handleOpen() {
-    setOpen(!open);
+    setSettingsOpen(!open);
   }
-  useShortcutKey({
-    modifierKeys: ["Control"],
-    keys: ["."],
-    action: handleOpen,
-  });
   return (
     <Modal open={open} onOpenChange={handleOpen}>
       <Modal.Content title="Settings">

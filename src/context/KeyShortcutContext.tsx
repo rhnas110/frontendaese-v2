@@ -3,8 +3,11 @@ import useShortcutKey from "../hooks/useShortcutKey";
 
 interface KeyShortcutContextType {
   showSidebar: boolean;
+  setShowSidebar: (value: boolean) => void;
   terminalOpen: boolean;
   setTerminalOpen: (value: boolean) => void;
+  settingsOpen: boolean;
+  setSettingsOpen: (value: boolean) => void;
 }
 
 const KeyShortcutContext = createContext<KeyShortcutContextType | undefined>(
@@ -16,6 +19,7 @@ export const KeyShortcutProvider: FC<{ children: ReactNode }> = ({
 }) => {
   const [showSidebar, setShowSidebar] = useState(true);
   const [terminalOpen, setTerminalOpen] = useState(false);
+  const [settingsOpen, setSettingsOpen] = useState(false);
 
   useShortcutKey({
     modifierKeys: ["Control"],
@@ -27,10 +31,22 @@ export const KeyShortcutProvider: FC<{ children: ReactNode }> = ({
     keys: ["`"],
     action: () => setTerminalOpen(!terminalOpen),
   });
+  useShortcutKey({
+    modifierKeys: ["Control"],
+    keys: ["."],
+    action: () => setSettingsOpen(!settingsOpen),
+  });
 
   return (
     <KeyShortcutContext.Provider
-      value={{ showSidebar, terminalOpen, setTerminalOpen }}
+      value={{
+        showSidebar,
+        setShowSidebar,
+        terminalOpen,
+        setTerminalOpen,
+        settingsOpen,
+        setSettingsOpen,
+      }}
     >
       {children}
     </KeyShortcutContext.Provider>
