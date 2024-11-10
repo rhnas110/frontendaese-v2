@@ -10,8 +10,7 @@ const WEB: {
 }[] = [
   {
     title: "impact.",
-    url: "https://im-pact.netlify.app/",
-    image: "https://im-pact.netlify.app/favicon.ico",
+    fullTitle: "impact.",
   },
   {
     title: "DNA News",

@@ -6,6 +6,7 @@ import { App, IndexCSS, Welcome } from "../Content/main";
 import { README } from "../Content/readme";
 import { UpdateLog } from "../Content/update-log";
 import { MOKOMDO } from "../Projects/Web/mokomdo";
+import { Impact } from "../Projects/Web/impact";
 
 import { NotFound as NotFoundLayouts } from "../../../pages/404";
 
@@ -36,6 +37,7 @@ const tabComponents: ILoveTypeScript = {
   readme: README,
   ["update log"]: UpdateLog,
   ["mokomdo"]: MOKOMDO,
+  ["impact"]: Impact,
 };
 const TabContent: React.FC = () => {
   const { activeTab } = useTabContext();
