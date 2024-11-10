@@ -27,7 +27,6 @@ const slugs = [
   "framer",
   "vite",
   "netlify",
-  "lenis",
   "visualstudiocode",
 ];
 
