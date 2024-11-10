@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { MotionInView } from "../../../Elements/Motion";
-import { SwiperThumb } from "../../../Elements/Swiper/SwiperThumb";
+import { SwiperThumb } from "../../../Elements/Swiper/swiper-thumb";
 import { IconCloud } from "../../../_ui/IconCloud";
 
 const data = [

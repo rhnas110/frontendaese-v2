@@ -2,11 +2,11 @@ import { useLayoutEffect, useRef } from "react";
 import { cn } from "../../../utils";
 import { AnimatePresence, Reorder } from "../../../utils/motion";
 
-import useShortcutKey from "../../../hooks/useShortcutKey";
-import { useTabContext } from "../../../context/TabContext";
-import { useKeyShortcut } from "../../../context/KeyShortcutContext";
+import useShortcutKey from "../../../hooks/use-shortcut-key";
+import { useTabContext } from "../../../context/tab-context";
+import { useKeyShortcut } from "../../../context/key-shortcut-context";
 import { ILoveTypeScript } from "../../../types";
-import TabItem from "./TabItem";
+import TabItem from "./tab-item";
 
 const TabNavbar: React.FC = () => {
   const { tabs, activeTab, removeTab, setTabs } = useTabContext();

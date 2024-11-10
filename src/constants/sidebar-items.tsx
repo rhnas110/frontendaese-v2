@@ -1,4 +1,4 @@
-import { SideNavItem } from "../types/menuType";
+import { SideNavItem } from "../types/menu";
 
 import { GlobeAltIcon } from "@heroicons/react/solid";
 

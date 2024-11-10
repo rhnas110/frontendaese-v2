@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
-import SEO from "../components/SEO";
-import Home from "./Home";
+import SEO from "../components/seo";
+import Home from "./home";
 import { NotFound } from "./404";
 
 // Toast

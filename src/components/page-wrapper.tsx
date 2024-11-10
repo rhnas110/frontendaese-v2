@@ -1,9 +1,9 @@
 import { ReactNode } from "react";
 
-import { Leftbar } from "./Leftbar";
-import Sidebar from "./Sidebar";
-import Navbar from "./Navbar";
-import MarginWidthWrapper from "./MarginWidthWrapper";
+import { Leftbar } from "./leftbar";
+import Sidebar from "./sidebar";
+import Navbar from "./navbar";
+import MarginWidthWrapper from "./margin-width-wrapper";
 import { ModalSettings } from "./Layouts/Settings";
 import { Terminal } from "./Layouts/Terminal";
 
@@ -19,10 +19,10 @@ export default function PageWrapper({
   return (
     <>
       <div className="flex">
-        <nav className="fixed z-20 hidden h-full lg:flex">
+        <aside className="fixed z-20 hidden h-full lg:flex">
           <Leftbar />
           <Sidebar />
-        </nav>
+        </aside>
         <Navbar />
         <main className="flex-1 overflow-x-hidden">
           <MarginWidthWrapper>

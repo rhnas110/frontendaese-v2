@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { cn } from "../utils";
-import { useKeyShortcut } from "../context/KeyShortcutContext";
+import { useKeyShortcut } from "../context/key-shortcut-context";
 
 export default function MarginWidthWrapper({
   className,

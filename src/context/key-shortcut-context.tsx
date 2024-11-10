@@ -1,5 +1,5 @@
 import { createContext, FC, ReactNode, useContext, useState } from "react";
-import useShortcutKey from "../hooks/useShortcutKey";
+import useShortcutKey from "../hooks/use-shortcut-key";
 
 interface KeyShortcutContextType {
   showSidebar: boolean;

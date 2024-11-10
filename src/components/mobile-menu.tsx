@@ -2,12 +2,12 @@ import { useEffect, useRef, useState } from "react";
 import { ChevronDownIcon, ChevronRightIcon } from "@heroicons/react/solid";
 import { Link } from "react-router-dom";
 
-import { MOBILE_MENU_ITEMS } from "../constants/mobileMenuItems";
-import { MobileMenuItem } from "../types/menuType";
+import { MOBILE_MENU_ITEMS } from "../constants/mobile-menu-items";
+import { MobileMenuItem } from "../types/menu";
 import { ILoveTypeScript } from "../types";
 
 import { motion, useCycle } from "../utils/motion";
-import { getFileIcon } from "../utils/fileIcon";
+import { getFileIcon } from "../utils/file-icon";
 import { Image } from "./Elements/Image";
 
 const sidebar = {

@@ -5,9 +5,9 @@ import { HelmetProvider } from "react-helmet-async";
 import App from "./App.tsx";
 import "./index.css";
 
-import { TabProvider } from "./context/TabContext";
-import { SidebarProvider } from "./context/SidebarContext.tsx";
-import { KeyShortcutProvider } from "./context/KeyShortcutContext.tsx";
+import { TabProvider } from "./context/tab-context.tsx";
+import { SidebarProvider } from "./context/sidebar-context.tsx";
+import { KeyShortcutProvider } from "./context/key-shortcut-context.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

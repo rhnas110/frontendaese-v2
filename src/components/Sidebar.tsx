@@ -6,17 +6,17 @@ import {
   MinusIcon,
 } from "@heroicons/react/solid";
 
-import { SideNavItem } from "../types/menuType";
+import { SideNavItem } from "../types/menu";
 
 import { Tooltip } from "./_ui/Tooltip";
 import { Image } from "./Elements/Image";
-import { Social } from "./Social";
+import { Social } from "./social";
 
 import { cn } from "../utils";
-import { getFileIcon } from "../utils/fileIcon";
-import { useTabContext } from "../context/TabContext";
-import { useSidebarContext } from "../context/SidebarContext";
-import { useKeyShortcut } from "../context/KeyShortcutContext";
+import { getFileIcon } from "../utils/file-icon";
+import { useTabContext } from "../context/tab-context";
+import { useSidebarContext } from "../context/sidebar-context";
+import { useKeyShortcut } from "../context/key-shortcut-context";
 
 const Sidebar = () => {
   const { sidebarItems, collapseAllFolders } = useSidebarContext();

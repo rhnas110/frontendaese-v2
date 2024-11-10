@@ -4,8 +4,8 @@ import { Image } from "../../Elements/Image";
 import { Motion } from "../../Elements/Motion";
 import { Highlighter } from "../../Elements/Highlighter";
 
-import { useTabContext } from "../../../context/TabContext";
-import VSCode from "../../../assets/VSCode.png";
+import { useTabContext } from "../../../context/tab-context";
+import VSCode from "../../../assets/vscode.png";
 
 export const App = () => {
   const { addTab } = useTabContext();

@@ -1,21 +1,21 @@
 import { useState } from "react";
+import { DialogContent } from "@radix-ui/react-dialog";
+import { ArrowsExpandIcon, XIcon } from "@heroicons/react/outline";
 // import Swiper required modules
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 // Import Swiper styles
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
-import "./SwiperThumb.css";
+import "./swiper-thumb.css";
 
+import Modal from "../../_ui/Modal";
+import { Tooltip } from "../../_ui/Tooltip";
+import { Slider, Slide } from ".";
 import { Image } from "../Image";
 import { MotionImage } from "../Motion";
-import { Slider, Slide } from ".";
-import { useKeyShortcut } from "../../../context/KeyShortcutContext";
-import Modal from "../../_ui/Modal";
-import { DialogContent } from "@radix-ui/react-dialog";
-import { ArrowsExpandIcon } from "@heroicons/react/outline";
-import { XIcon } from "@heroicons/react/outline";
-import { Tooltip } from "../../_ui/Tooltip";
+
+import { useKeyShortcut } from "../../../context/key-shortcut-context";
 
 const DEFAULT_DATA = [
   {

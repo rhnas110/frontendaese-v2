@@ -1,10 +1,10 @@
-import { useTabContext } from "../../../../context/TabContext";
-import useShortcutKey from "../../../../hooks/useShortcutKey";
+import { useTabContext } from "../../../../context/tab-context";
+import useShortcutKey from "../../../../hooks/use-shortcut-key";
 import { shell } from "../../../../utils/shell";
-import { commandExists } from "../../../../utils/bin/commandExists";
-import { handleTabCompletion } from "../../../../utils/bin/tabCompletion";
+import { commandExists } from "../../../../utils/bin/command-exists";
+import { handleTabCompletion } from "../../../../utils/bin/tab-completion";
 
-import { Label } from "./Label";
+import { Label } from "./label";
 
 export const Input = ({
   inputRef,

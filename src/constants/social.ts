@@ -1,5 +1,5 @@
-import LinkedinLogo from "../assets/logos/LinkedinLogo.png";
-import MailLogo from "../assets/logos/MailLogo.png";
+import LinkedinLogo from "../assets/logos/linkedin.png";
+import MailLogo from "../assets/logos/mail.png";
 
 const SOCIAL = [
   {

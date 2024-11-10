@@ -6,7 +6,7 @@ import {
 import { Link } from "react-router-dom";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 
-import JSIcon from "../../../assets/icons/JSIcon.png";
+import JSIcon from "../../../assets/icons/js.png";
 import { Image } from "../../Elements/Image";
 import { Motion } from "../../Elements/Motion";
 import { Highlighter } from "../../Elements/Highlighter";

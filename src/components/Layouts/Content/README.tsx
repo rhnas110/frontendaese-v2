@@ -1,5 +1,5 @@
 import { anOldHope } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { useTabContext } from "../../../context/TabContext";
+import { useTabContext } from "../../../context/tab-context";
 import { Highlighter } from "../../Elements/Highlighter";
 import { Image } from "../../Elements/Image";
 import { Motion, MotionInView } from "../../Elements/Motion";

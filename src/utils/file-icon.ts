@@ -1,5 +1,5 @@
-import TSIcon from "../assets/icons/TSIcon.png";
-import JSIcon from "../assets/icons/JSIcon.png";
+import JSIcon from "../assets/icons/js.png";
+import TSIcon from "../assets/icons/ts.png";
 
 const TSXIcon =
   "https://raw.githubusercontent.com/vscode-icons/vscode-icons/79c370141fe104b4bdc85a5c3d0e21f2a98b12d5/icons/file_type_reactts.svg";

@@ -5,7 +5,7 @@ import {
   CogIcon,
 } from "@heroicons/react/outline";
 import { Tooltip } from "./_ui/Tooltip";
-import { useKeyShortcut } from "../context/KeyShortcutContext";
+import { useKeyShortcut } from "../context/key-shortcut-context";
 import { toastInfo } from "../utils/toast";
 
 export const Leftbar: FC = () => {

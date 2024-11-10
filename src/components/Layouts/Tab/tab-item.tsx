@@ -1,8 +1,8 @@
 import { XIcon } from "@heroicons/react/solid";
 import tw from "tailwind-styled-components";
 
-import { Tab, useTabContext } from "../../../context/TabContext";
-import { getFileIcon } from "../../../utils/fileIcon";
+import { Tab, useTabContext } from "../../../context/tab-context";
+import { getFileIcon } from "../../../utils/file-icon";
 
 import { Tooltip } from "../../_ui/Tooltip";
 import { Image } from "../../Elements/Image";

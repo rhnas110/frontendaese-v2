@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import { useEffect } from "react";
 import { HomePage, NotFoundPage } from "./pages";
-import { initializeGA, ReactGA } from "./utils/googleAnalytics";
+import { initializeGA, ReactGA } from "./utils/google-analytics";
 
 function App() {
   useEffect(() => {

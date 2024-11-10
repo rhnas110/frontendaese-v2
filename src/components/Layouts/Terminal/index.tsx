@@ -1,13 +1,13 @@
 import { FC, useCallback, useEffect, useRef } from "react";
 
-import { useKeyShortcut } from "../../../context/KeyShortcutContext";
+import { useKeyShortcut } from "../../../context/key-shortcut-context";
 import { cn } from "../../../utils";
 import { started } from "../../../utils/bin";
 
-import { Navbar } from "./Navbar";
-import Input from "./Input";
-import History from "./History";
-import { useHistory } from "./History/hook";
+import { Navbar } from "./navbar";
+import Input from "./input";
+import History from "./history";
+import { useHistory } from "./history/hook";
 
 export const Terminal: FC = () => {
   const { showSidebar, terminalOpen, setTerminalOpen } = useKeyShortcut();

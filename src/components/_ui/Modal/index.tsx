@@ -1,7 +1,7 @@
 import * as Dialog from "@radix-ui/react-dialog";
 import { XIcon } from "@heroicons/react/solid";
 import { ReactNode } from "react";
-import "./styles.css";
+import "./index.css";
 import { cn } from "../../../utils";
 
 export default function Modal({

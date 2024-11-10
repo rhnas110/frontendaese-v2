@@ -1,15 +1,15 @@
 import { Image } from "../components/Elements/Image";
-import JsLogo from "../assets/logos/JsLogo.png";
-import HTMLLogo from "../assets/logos/HTMLLogo.png";
-import CSSLogo from "../assets/logos/CSSLogo.png";
-import ReactLogo from "../assets/logos/ReactLogo.png";
-import TailwindLogo from "../assets/logos/TailwindLogo.png";
-import NextLogo from "../assets/logos/NextLogo.png";
-import TypescriptLogo from "../assets/logos/TypescriptLogo.png";
-import NodeJSLogo from "../assets/logos/NodeJSLogo.png";
-import SQLLogo from "../assets/logos/SQLLogo.png";
-import RESTAPILogo from "../assets/logos/RESTAPILogo.png";
-import FramerMotionLogo from "../assets/logos/FramerMotionLogo.webp";
+import JsLogo from "../assets/logos/js.png";
+import HTMLLogo from "../assets/logos/html.png";
+import CSSLogo from "../assets/logos/css.png";
+import ReactLogo from "../assets/logos/react-js.png";
+import TailwindLogo from "../assets/logos/tailwind.png";
+import NextLogo from "../assets/logos/next-js.png";
+import TypescriptLogo from "../assets/logos/ts.png";
+import NodeJSLogo from "../assets/logos/node-js.png";
+import SQLLogo from "../assets/logos/sql.png";
+import RESTAPILogo from "../assets/logos/rest-api.png";
+import FramerMotionLogo from "../assets/logos/framer-motion.webp";
 
 export const skills = [
   {

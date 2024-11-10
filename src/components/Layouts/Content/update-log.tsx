@@ -1,4 +1,4 @@
-import { updateLog } from "../../../constants/updateLog";
+import { updateLog } from "../../../constants/update-log";
 import { Motion, MotionInView } from "../../Elements/Motion";
 
 export const UpdateLog = () => {

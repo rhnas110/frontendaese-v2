@@ -1,4 +1,4 @@
-import MobileMenu from "./MobileMenu";
+import MobileMenu from "./mobile-menu";
 import { Logo } from "./Elements/Logo";
 
 const Navbar: React.FC = () => {

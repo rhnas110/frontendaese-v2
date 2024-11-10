@@ -1,4 +1,4 @@
-import { MobileMenuItem } from "../types/menuType";
+import { MobileMenuItem } from "../types/menu";
 
 export const MOBILE_MENU_ITEMS: MobileMenuItem[] = [
   {
