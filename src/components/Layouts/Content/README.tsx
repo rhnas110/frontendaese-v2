@@ -1,46 +1,27 @@
 import { anOldHope } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import { useTabContext } from "../../../context/tab-context";
+import { DocsContent, DocsHeader } from "../../Elements/Docs";
 import { Highlighter } from "../../Elements/Highlighter";
 import { Image } from "../../Elements/Image";
-import { Motion, MotionInView } from "../../Elements/Motion";
 
 export const README = () => {
   const { addTab } = useTabContext();
   return (
     <section className="flex flex-col px-2 py-32 md:px-4 gap-y-8">
-      <Motion
-        className="text-center"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1, transition: { duration: 0.7 } }}
-      >
-        <h1 className="text-4xl font-bold text-gray-300">frontendaese</h1>
-        <hr className="h-px my-4 border-0 opacity-75 bg-gradient-to-r from-transparent via-neutral-500 to-transparent" />
-        <p>
-          frontendaese is a personal portfolio website inspired by Visual Studio
-          Code.
-        </p>
-      </Motion>
-      <MotionInView
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1, transition: { duration: 0.7 } }}
-        once
-      >
-        <h2 className="text-2xl font-bold text-gray-300">Introduction</h2>
-        <hr className="h-px mt-2 mb-4 border-0 rounded opacity-75 bg-gradient-to-r from-neutral-500 via-transparent to-transparent" />
+      <DocsHeader
+        title="frontendaese"
+        description="frontendaese is a personal portfolio website inspired by Visual Studio
+          Code."
+      />
+      <DocsContent title="Introduction">
         <p>
           Welcome to frontendaese, inspired by the look and feel of Visual
           Studio Code, this portfolio acts like an Integrated Development
           Environment (IDE), providing a unique and interactive experience for
           visitors.
         </p>
-      </MotionInView>
-      <MotionInView
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1, transition: { duration: 0.7 } }}
-        once
-      >
-        <h2 className="text-2xl font-bold text-gray-300">Tech Stack</h2>
-        <hr className="h-px mt-2 mb-4 border-0 rounded opacity-75 bg-gradient-to-r from-neutral-500 via-transparent to-transparent" />
+      </DocsContent>
+      <DocsContent title="Tech Stack">
         <div className="mx-auto lg:max-w-[50%]">
           <Image
             src="https://raw.githubusercontent.com/SAWARATSUKI/KawaiiLogos/main/React/React.png"
@@ -69,14 +50,8 @@ export const README = () => {
             />
           </div>
         </div>
-      </MotionInView>
-      <MotionInView
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1, transition: { duration: 0.7 } }}
-        once
-      >
-        <h2 className="text-2xl font-bold text-gray-300">Getting Started</h2>
-        <hr className="h-px mt-2 mb-4 border-0 rounded opacity-75 bg-gradient-to-r from-neutral-500 via-transparent to-transparent" />
+      </DocsContent>
+      <DocsContent title="Getting Started">
         <Highlighter
           language="bash"
           style={anOldHope}
@@ -98,7 +73,7 @@ export const README = () => {
         >
           {"cd ./src/pages/Home"}
         </Highlighter>
-      </MotionInView>
+      </DocsContent>
       <h2 className="text-2xl font-bold text-center text-gray-300">
         Enjoy the exploration!
       </h2>
