@@ -70,3 +70,25 @@ export const FramerMagnetic = ({ children }) => {
     </motion.div>
   );
 };
+
+export const MotionImage = ({
+  src,
+  alt,
+  lazy = false,
+  className = "",
+  ...props
+}) => {
+  return (
+    <motion.img
+      {...props}
+      transition={props.transition || transition}
+      className={cn(
+        "w-full h-full object-cover object-center bg-[#BED2F5] select-none",
+        className
+      )}
+      src={src}
+      alt={alt || "Alt Image"}
+      loading={lazy ? "lazy" : "eager"}
+    />
+  );
+};

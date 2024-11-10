@@ -35,9 +35,7 @@ const WEB: {
   },
   {
     title: "MOKOMDO",
-    fullTitle: "Multi Warehouse E-Commerce | MOKOMDO",
-    url: "https://jcwd220405.purwadhikabootcamp.com/",
-    image: "https://abangkuh.de/assets/mokomdo.png",
+    fullTitle: "Modal Komputer Doank",
   },
 ];
 

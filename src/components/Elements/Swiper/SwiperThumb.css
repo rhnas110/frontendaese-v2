@@ -1,0 +1,15 @@
+.swiper-thumb-preview .swiper-slide {
+    opacity: 0.4;
+}
+
+.swiper-thumb-preview .swiper-slide-thumb-active {
+    opacity: 1;
+}
+
+.swiper-thumb-preview .swiper-slide img {
+    filter: blur(.125rem);
+}
+
+.swiper-thumb-preview .swiper-slide-thumb-active img {
+    filter: blur(0px);
+}

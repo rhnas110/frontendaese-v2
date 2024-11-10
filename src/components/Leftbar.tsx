@@ -12,12 +12,14 @@ export const Leftbar: FC = () => {
   const { showSidebar, setShowSidebar, settingsOpen, setSettingsOpen } =
     useKeyShortcut();
   return (
-    <div className="flex flex-col z-30 items-center justify-between w-12 h-full pb-4 pt-2 gap-y-2 bg-[#424242] overflow-hidden relative">
+    <div className="flex flex-col z-30 items-center justify-between w-12 h-full py-4 gap-y-2 bg-[#424242] overflow-hidden relative">
       <div className="flex flex-col items-center w-full gap-y-2">
         <Tooltip content="Explorer" side="right">
           <i
             className={`cursor-pointer hover:opacity-100 w-full flex justify-center ${
-              showSidebar ? "opacity-100 border-l-2" : "opacity-50"
+              showSidebar
+                ? "opacity-100 border-l-2 border-foreground"
+                : "opacity-50"
             }`}
             onClick={() => setShowSidebar(!showSidebar)}
           >

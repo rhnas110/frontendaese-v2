@@ -2,6 +2,7 @@ import * as Dialog from "@radix-ui/react-dialog";
 import { XIcon } from "@heroicons/react/solid";
 import { ReactNode } from "react";
 import "./styles.css";
+import { cn } from "../../../utils";
 
 export default function Modal({
   open,
@@ -49,6 +50,20 @@ function ModalContent({
   );
 }
 
+function ModalOverlay({ className }: { className?: string }) {
+  return (
+    <Dialog.Overlay
+      className={cn(
+        "fixed inset-0 z-20 DialogOverlay bg-background/50 backdrop-blur-sm",
+        className
+      )}
+    />
+  );
+}
+
+Modal.Portal = Dialog.Portal;
+Modal.Overlay = ModalOverlay;
 Modal.Button = Dialog.Trigger;
+Modal.Title = Dialog.Title;
 Modal.Close = Dialog.Close;
 Modal.Content = ModalContent;
