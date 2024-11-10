@@ -16,6 +16,7 @@ import { Image } from "../Image";
 import { MotionImage } from "../Motion";
 
 import { useKeyShortcut } from "../../../context/key-shortcut-context";
+import { cn } from "../../../utils";
 
 const DEFAULT_DATA = [
   {
@@ -36,8 +37,13 @@ export function SwiperThumb({ image = [] }) {
 
   const THUMBNAIL = SLIDE_DATA[modal?.index]?.image;
   return (
-    <>
-      <div className="relative h-[75%]">
+    <div className="aspect-video">
+      <div
+        className={cn("relative", {
+          "h-[75%]": SLIDE_DATA.length > 1,
+          "h-full": SLIDE_DATA.length === 1,
+        })}
+      >
         <Slider
           style={{
             "--swiper-navigation-color": "#F9F8F6",
@@ -78,22 +84,24 @@ export function SwiperThumb({ image = [] }) {
         image={THUMBNAIL}
       />
 
-      <Slider
-        onSwiper={setThumbsSwiper}
-        spaceBetween={10}
-        slidesPerView={showSidebar ? 3 : 4}
-        freeMode={true}
-        grabCursor={true}
-        modules={[FreeMode, Navigation, Thumbs]}
-        className="swiper-thumb-preview h-[25%] py-2"
-      >
-        {SLIDE_DATA.map((item) => (
-          <Slide key={item.id} className="overflow-hidden rounded-lg group">
-            <Image src={item.image} alt={`Slide ${item.id}`} lazy />
-          </Slide>
-        ))}
-      </Slider>
-    </>
+      {SLIDE_DATA.length > 1 ? (
+        <Slider
+          onSwiper={setThumbsSwiper}
+          spaceBetween={10}
+          slidesPerView={showSidebar ? 3 : 4}
+          freeMode={true}
+          grabCursor={true}
+          modules={[FreeMode, Navigation, Thumbs]}
+          className="swiper-thumb-preview h-[25%] py-2"
+        >
+          {SLIDE_DATA.map((item) => (
+            <Slide key={item.id} className="overflow-hidden rounded-lg group">
+              <Image src={item.image} alt={`Slide ${item.id}`} lazy />
+            </Slide>
+          ))}
+        </Slider>
+      ) : null}
+    </div>
   );
 }
 
