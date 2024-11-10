@@ -26,7 +26,7 @@ const WEB: {
   {
     title: "motionime",
     url: "https://motionime.online/",
-    image: "https://motionime.online/favicon.ico",
+    image: "https://abangkuh.de/assets/motionime.jpg",
   },
   {
     title: "aese",
