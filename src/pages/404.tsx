@@ -24,6 +24,9 @@ export const NotFound: FC = () => {
           <p className="text-lg">
             You need to turn off lights, it attracts bugs.
           </p>
+          <a href="/" className="text-lg underline underline-offset-2">
+            Back
+          </a>
         </div>
       </div>
     </Motion>
