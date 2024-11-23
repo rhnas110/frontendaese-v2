@@ -1,8 +1,10 @@
+import js from "../../../../assets/icons/js.png";
+import framer from "../../../../assets/logos/framer-motion.webp";
 import { FC } from "react";
-import { IconCloud } from "../../../_ui/IconCloud";
 import { DocsContent, DocsHeader } from "../../../Elements/Docs";
 import { MotionInView } from "../../../Elements/Motion";
 import { SwiperThumb } from "../../../Elements/Swiper/swiper-thumb";
+import { TechStack } from "../../TechStack/TechStack";
 
 const data = [
   {
@@ -20,14 +22,37 @@ const data = [
   },
 ];
 
-const slugs = [
-  "javascript",
-  "react",
-  "tailwindcss",
-  "framer",
-  "vite",
-  "netlify",
-  "visualstudiocode",
+const techStackData = [
+  {
+    id: 1,
+    src: js,
+    title: "JavaScript",
+  },
+  {
+    id: 2,
+    src: "https://raw.githubusercontent.com/vscode-icons/vscode-icons/335811e6c4ac5d017a4ce179c624c86e4179ebd9/icons/file_type_reactjs.svg",
+    title: "React",
+  },
+  {
+    id: 3,
+    src: "https://raw.githubusercontent.com/vscode-icons/vscode-icons/335811e6c4ac5d017a4ce179c624c86e4179ebd9/icons/file_type_tailwind.svg",
+    title: "Tailwind CSS",
+  },
+  {
+    id: 4,
+    src: framer,
+    title: "Framer",
+  },
+  {
+    id: 5,
+    src: "https://raw.githubusercontent.com/vscode-icons/vscode-icons/335811e6c4ac5d017a4ce179c624c86e4179ebd9/icons/file_type_vite.svg",
+    title: "Vite",
+  },
+  {
+    id: 6,
+    src: "https://raw.githubusercontent.com/vscode-icons/vscode-icons/335811e6c4ac5d017a4ce179c624c86e4179ebd9/icons/file_type_light_netlify.svg",
+    title: "Netlify",
+  },
 ];
 
 export const Impact: FC = () => {
@@ -55,7 +80,7 @@ export const Impact: FC = () => {
       </DocsContent>
 
       <DocsContent title="Tech Stack">
-        <IconCloud iconSlugs={slugs} />
+        <TechStack data={techStackData} />
       </DocsContent>
     </section>
   );

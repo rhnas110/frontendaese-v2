@@ -1,8 +1,10 @@
+import js from "../../../../assets/icons/js.png";
+import github from "../../../../assets/logos/github.png";
 import { FC } from "react";
-import { IconCloud } from "../../../_ui/IconCloud";
 import { DocsContent, DocsHeader } from "../../../Elements/Docs";
 import { MotionInView } from "../../../Elements/Motion";
 import { SwiperThumb } from "../../../Elements/Swiper/swiper-thumb";
+import { TechStack } from "../../TechStack/TechStack";
 
 const data = [
   {
@@ -12,24 +14,77 @@ const data = [
   },
 ];
 
-const slugs = [
-  "javascript",
-  "react",
-  "chakraui",
-  "nodedotjs",
-  "express",
-  "mysql",
-  "sequelize",
-  "html5",
-  "css3",
-  "redux",
-  "jsonwebtokens",
-  "nodemon",
-  "dotenv",
-  "figma",
-  "git",
-  "jira",
-  "github",
+const techStackData = [
+  {
+    id: 1,
+    src: "https://raw.githubusercontent.com/vscode-icons/vscode-icons/335811e6c4ac5d017a4ce179c624c86e4179ebd9/icons/file_type_reactjs.svg",
+    title: "React",
+  },
+  {
+    id: 2,
+    src: js,
+    title: "JavaScript",
+  },
+  {
+    id: 3,
+    src: "https://raw.githubusercontent.com/vscode-icons/vscode-icons/335811e6c4ac5d017a4ce179c624c86e4179ebd9/icons/file_type_node.svg",
+    title: "Node.js",
+  },
+  {
+    id: 4,
+    src: "https://raw.githubusercontent.com/vscode-icons/vscode-icons/335811e6c4ac5d017a4ce179c624c86e4179ebd9/icons/file_type_mysql.svg",
+    title: "MySQL",
+  },
+  {
+    id: 5,
+    src: "https://img.icons8.com/nolan/512/express-js.png",
+    title: "Express.js",
+  },
+  {
+    id: 6,
+    src: "https://raw.githubusercontent.com/vscode-icons/vscode-icons/335811e6c4ac5d017a4ce179c624c86e4179ebd9/icons/file_type_sequelize.svg",
+    title: "Sequelize.js",
+  },
+  {
+    id: 9,
+    src: "https://raw.githubusercontent.com/vscode-icons/vscode-icons/335811e6c4ac5d017a4ce179c624c86e4179ebd9/icons/file_type_git.svg",
+    title: "Git",
+  },
+  {
+    id: 10,
+    src: github,
+    title: "GitHub",
+  },
+  {
+    id: 11,
+    src: "https://img.icons8.com/?size=512&id=r9QJ0VFFrn7T&format=png",
+    title: "Chakra UI",
+  },
+  {
+    id: 12,
+    src: "https://cdn.worldvectorlogo.com/logos/redux.svg",
+    title: "Redux",
+  },
+  {
+    id: 13,
+    src: "https://seeklogo.com/images/J/jwt-logo-65D86B4640-seeklogo.com.png",
+    title: "JWT",
+  },
+  {
+    id: 14,
+    src: "https://raw.githubusercontent.com/vscode-icons/vscode-icons/335811e6c4ac5d017a4ce179c624c86e4179ebd9/icons/file_type_nodemon.svg",
+    title: "nodemon",
+  },
+  {
+    id: 15,
+    src: "https://cdn4.iconfinder.com/data/icons/logos-brands-in-colors/3000/figma-logo-512.png",
+    title: "Figma",
+  },
+  {
+    id: 16,
+    src: "https://seeklogo.com/images/J/jira-logo-FD39F795A7-seeklogo.com.png",
+    title: "Jira",
+  },
 ];
 
 export const MOKOMDO: FC = () => {
@@ -62,7 +117,7 @@ export const MOKOMDO: FC = () => {
       </DocsContent>
 
       <DocsContent title="Tech Stack">
-        <IconCloud iconSlugs={slugs} />
+        <TechStack data={techStackData} className="h-[75vh]" />
       </DocsContent>
     </section>
   );

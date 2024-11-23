@@ -1,0 +1,141 @@
+.sticker {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    /* cursor: grab; */
+}
+
+.sticker img {
+    width: 100%;
+    height: 100%;
+}
+
+.ts {
+    position: absolute;
+    border-radius: 100vmax;
+}
+
+.top {
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 5px;
+    background: linear-gradient(90deg,
+            transparent 50%,
+            rgba(66, 66, 66, 0.5),
+            rgb(66, 66, 66));
+}
+
+.bottom {
+    right: 0;
+    bottom: 0;
+    height: 5px;
+    background: linear-gradient(90deg,
+            rgb(66, 66, 66),
+            rgba(66, 66, 66, 0.5),
+            transparent 50%);
+}
+
+.right {
+    top: 0;
+    right: 0;
+    width: 5px;
+    height: 0;
+    background: linear-gradient(180deg,
+            transparent 30%,
+            rgba(66, 66, 66, 0.5),
+            rgb(66, 66, 66));
+}
+
+.left {
+    left: 0;
+    bottom: 0;
+    width: 5px;
+    height: 0;
+    background: linear-gradient(180deg,
+            rgb(66, 66, 66),
+            rgba(66, 66, 66, 0.5),
+            transparent 70%);
+}
+
+.top {
+    animation: animateTop 5s ease-in-out infinite;
+}
+
+.bottom {
+    animation: animateBottom 5s ease-in-out infinite;
+}
+
+.right {
+    animation: animateRight 5s ease-in-out infinite;
+}
+
+.left {
+    animation: animateLeft 5s ease-in-out infinite;
+}
+
+@keyframes animateTop {
+    25% {
+        width: 100%;
+        opacity: 1;
+    }
+
+    30%,
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes animateBottom {
+
+    0%,
+    50% {
+        opacity: 0;
+        width: 0;
+    }
+
+    75% {
+        opacity: 1;
+        width: 100%;
+    }
+
+    76%,
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes animateRight {
+
+    0%,
+    25% {
+        opacity: 0;
+        height: 0;
+    }
+
+    50% {
+        opacity: 1;
+        height: 100%;
+    }
+
+    55%,
+    100% {
+        height: 100%;
+        opacity: 0;
+    }
+}
+
+@keyframes animateLeft {
+
+    0%,
+    75% {
+        opacity: 0;
+        bottom: 0;
+        height: 0;
+    }
+
+    100% {
+        opacity: 1;
+        height: 100%;
+    }
+}
