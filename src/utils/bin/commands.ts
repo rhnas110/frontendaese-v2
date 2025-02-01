@@ -9,6 +9,9 @@ export const started = (): string => {
 
 Type 'help' to see the list of available commands.
 Type 'repo' or click <a class="underline" href="${config.repo}" target="_blank">here</a> for the Github repository.
+Type 'donate' to support me.
+
+Enjoy the exploration!
 `;
 };
 
