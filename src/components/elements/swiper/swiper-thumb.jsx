@@ -9,11 +9,11 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import "./swiper-thumb.css";
 
-import Modal from "../../_ui/Modal";
-import { Tooltip } from "../../_ui/Tooltip";
+import Modal from "../../_ui/modal";
+import { Tooltip } from "../../_ui/tooltip";
 import { Slider, Slide } from ".";
-import { Image } from "../Image";
-import { MotionImage } from "../Motion";
+import { Image } from "../image";
+import { MotionImage } from "../motion";
 
 import { useKeyShortcut } from "../../../context/key-shortcut-context";
 import { cn } from "../../../utils";

@@ -1,6 +1,6 @@
-import Modal from "../../_ui/Modal";
-import { Kbd } from "../../_ui/Kbd";
-import { DarkMode } from "../../Elements/Button/dark-mode";
+import Modal from "../../_ui/modal";
+import { Kbd } from "../../_ui/kbd";
+import { DarkMode } from "../../elements/button/dark-mode";
 import { useKeyShortcut } from "../../../context/key-shortcut-context";
 
 const hotkeys = [

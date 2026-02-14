@@ -1,6 +1,6 @@
 import "./index.css";
 import { useEffect, useRef, useState } from "react";
-import { MotionImage } from "../../Elements/Motion";
+import { MotionImage } from "../../elements/motion";
 import { motion } from "../../../utils/motion";
 import { Sticker } from "../../../types";
 import { cn } from "../../../utils";
@@ -28,7 +28,7 @@ export const TechStack = ({
       const canvasWidth = constraintsRef.current.clientWidth;
       const canvasHeight = constraintsRef.current.clientHeight;
       const positions = data.map(() =>
-        getRandomPosition(canvasWidth, canvasHeight)
+        getRandomPosition(canvasWidth, canvasHeight),
       );
       setInitialPositions(positions);
     }

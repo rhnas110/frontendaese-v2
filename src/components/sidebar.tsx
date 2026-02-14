@@ -9,7 +9,7 @@ import {
 import { SideNavItem } from "../types/menu";
 
 import { Tooltip } from "./_ui/Tooltip";
-import { Image } from "./Elements/Image";
+import { Image } from "./elements/image";
 import { Social } from "./social";
 
 import { cn } from "../utils";
@@ -171,7 +171,7 @@ const MenuItem: React.FC<{ item: SideNavItem }> = ({ item }) => {
             "flex flex-row items-center py-1 w-full hover:bg-opacity-80 hover:bg-[#2b2b2b] px-2 cursor-pointer gap-1",
             {
               "bg-opacity-75 bg-[#2b2b2b]": isActive,
-            }
+            },
           )}
         >
           <div>

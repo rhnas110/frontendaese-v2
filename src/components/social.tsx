@@ -2,7 +2,7 @@ import { FC } from "react";
 import { Link } from "react-router-dom";
 
 import { Tooltip } from "./_ui/Tooltip";
-import { Image } from "./Elements/Image";
+import { Image } from "./elements/image";
 
 import SOCIAL from "../constants/social";
 

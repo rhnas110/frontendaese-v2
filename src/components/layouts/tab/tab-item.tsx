@@ -4,8 +4,8 @@ import tw from "tailwind-styled-components";
 import { Tab, useTabContext } from "../../../context/tab-context";
 import { getFileIcon } from "../../../utils/file-icon";
 
-import { Tooltip } from "../../_ui/Tooltip";
-import { Image } from "../../Elements/Image";
+import { Tooltip } from "../../_ui/tooltip";
+import { Image } from "../../elements/image";
 
 const Container = tw.div`
   h-full 

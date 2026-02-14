@@ -5,8 +5,8 @@ import { Leftbar } from "./leftbar";
 import Sidebar from "./sidebar";
 import Navbar from "./navbar";
 import MarginWidthWrapper from "./margin-width-wrapper";
-import { ModalSettings } from "./Layouts/Settings";
-import { Terminal } from "./Layouts/Terminal";
+import { ModalSettings } from "./layouts/settings";
+import { Terminal } from "./layouts/terminal";
 
 import { cn } from "../utils";
 

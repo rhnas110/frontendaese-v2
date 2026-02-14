@@ -8,7 +8,7 @@ import { ILoveTypeScript } from "../types";
 
 import { motion, useCycle } from "../utils/motion";
 import { getFileIcon } from "../utils/file-icon";
-import { Image } from "./Elements/Image";
+import { Image } from "./elements/image";
 
 const sidebar = {
   open: (height = 1000) => ({

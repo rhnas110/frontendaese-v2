@@ -1,7 +1,7 @@
 import { IdentificationIcon } from "@heroicons/react/solid";
-import List from "../List";
+import List from "../list";
 import { skills } from "../../../constants/skills";
-import { MotionInView } from "../../Elements/Motion";
+import { MotionInView } from "../../elements/motion";
 
 const About = () => {
   return (

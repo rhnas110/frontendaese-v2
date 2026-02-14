@@ -1,8 +1,8 @@
 import { anOldHope } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { Kbd } from "../../_ui/Kbd";
-import { Image } from "../../Elements/Image";
-import { Motion } from "../../Elements/Motion";
-import { Highlighter } from "../../Elements/Highlighter";
+import { Kbd } from "../../_ui/kbd";
+import { Image } from "../../elements/image";
+import { Motion } from "../../elements/motion";
+import { Highlighter } from "../../elements/highlighter";
 
 import { useTabContext } from "../../../context/tab-context";
 import VSCode from "../../../assets/vscode.png";

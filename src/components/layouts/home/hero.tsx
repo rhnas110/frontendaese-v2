@@ -7,9 +7,9 @@ import { Link } from "react-router-dom";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 
 import JSIcon from "../../../assets/icons/js.png";
-import { Image } from "../../Elements/Image";
-import { Motion } from "../../Elements/Motion";
-import { Highlighter } from "../../Elements/Highlighter";
+import { Image } from "../../elements/image";
+import { Motion } from "../../elements/motion";
+import { Highlighter } from "../../elements/highlighter";
 import { getProfileConfig } from "../../../utils/profile-config";
 import { MobileXs } from "../../../utils/screen";
 import { randomIntFromInterval } from "../../../utils";

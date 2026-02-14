@@ -1,4 +1,4 @@
-import { MotionInView } from "../Motion";
+import { MotionInView } from "../motion";
 
 export function DocsHeader({
   title,

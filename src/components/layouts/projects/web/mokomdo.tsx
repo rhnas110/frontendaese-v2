@@ -1,10 +1,10 @@
 import js from "../../../../assets/icons/js.png";
 import github from "../../../../assets/logos/github.png";
 import { FC } from "react";
-import { DocsContent, DocsHeader } from "../../../Elements/Docs";
-import { MotionInView } from "../../../Elements/Motion";
-import { SwiperThumb } from "../../../Elements/Swiper/swiper-thumb";
-import { TechStack } from "../../TechStack/TechStack";
+import { DocsContent, DocsHeader } from "../../../elements/docs";
+import { MotionInView } from "../../../elements/motion";
+import { SwiperThumb } from "../../../elements/swiper/swiper-thumb";
+import { TechStack } from "../../techstack";
 
 const data = [
   {

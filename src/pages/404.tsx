@@ -1,6 +1,6 @@
 import { FC } from "react";
-import { Image } from "../components/Elements/Image";
-import { Motion } from "../components/Elements/Motion";
+import { Image } from "../components/elements/image";
+import { Motion } from "../components/elements/motion";
 import NotFoundImage from "../assets/not-found.png";
 
 export const NotFound: FC = () => {

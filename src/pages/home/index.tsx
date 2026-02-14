@@ -1,4 +1,4 @@
-import { Home as HomeLayouts } from "../../components/Layouts/Home";
+import { Home as HomeLayouts } from "../../components/layouts/home";
 import PageWrapper from "../../components/page-wrapper";
 
 const Home = () => {

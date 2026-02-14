@@ -1,8 +1,8 @@
 import { anOldHope } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import { useTabContext } from "../../../context/tab-context";
-import { DocsContent, DocsHeader } from "../../Elements/Docs";
-import { Highlighter } from "../../Elements/Highlighter";
-import { Image } from "../../Elements/Image";
+import { DocsContent, DocsHeader } from "../../elements/docs";
+import { Highlighter } from "../../elements/highlighter";
+import { Image } from "../../elements/image";
 
 export const README = () => {
   const { addTab } = useTabContext();

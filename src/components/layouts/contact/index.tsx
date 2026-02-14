@@ -1,6 +1,6 @@
 import { MailIcon } from "@heroicons/react/solid";
 import { Link } from "react-router-dom";
-import { FramerMagnetic, MotionInView } from "../../Elements/Motion";
+import { FramerMagnetic, MotionInView } from "../../elements/motion";
 
 const Contact = () => {
   return (

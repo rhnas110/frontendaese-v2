@@ -1,4 +1,4 @@
-import { Image } from "../components/Elements/Image";
+import { Image } from "../components/elements/image";
 import JsLogo from "../assets/logos/js.png";
 import HTMLLogo from "../assets/logos/html.png";
 import CSSLogo from "../assets/logos/css.png";

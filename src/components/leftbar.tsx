@@ -4,7 +4,7 @@ import {
   UserCircleIcon,
   CogIcon,
 } from "@heroicons/react/outline";
-import { Tooltip } from "./_ui/Tooltip";
+import { Tooltip } from "./_ui/tooltip";
 import { useKeyShortcut } from "../context/key-shortcut-context";
 import { toastInfo } from "../utils/toast";
 

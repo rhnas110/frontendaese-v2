@@ -1,7 +1,7 @@
 import { Desktop } from "../../../utils/screen";
-import TabNavbar from "../Tab/tab-navbar";
-import TabContent from "../Tab/tab-content";
-import { ModalOnceUp } from "../Modal/modal-once-up";
+import TabNavbar from "../tab/tab-navbar";
+import TabContent from "../tab/tab-content";
+import { ModalOnceUp } from "../modal/modal-once-up";
 
 export const Home = () => {
   return (

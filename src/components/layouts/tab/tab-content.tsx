@@ -1,12 +1,12 @@
-import Hero from "../Home/hero";
-import About from "../About";
-import Resume from "../Resume";
-import Contact from "../Contact";
-import { App, IndexCSS, Welcome } from "../Content/main";
-import { README } from "../Content/readme";
-import { UpdateLog } from "../Content/update-log";
-import { MOKOMDO } from "../Projects/Web/mokomdo";
-import { Impact } from "../Projects/Web/impact";
+import Hero from "../home/hero";
+import About from "../about";
+import Resume from "../resume";
+import Contact from "../contact";
+import { App, IndexCSS, Welcome } from "../content/main";
+import { README } from "../content/readme";
+import { UpdateLog } from "../content/update-log";
+import { MOKOMDO } from "../projects/web/mokomdo";
+import { Impact } from "../projects/web/impact";
 
 import { NotFound as NotFoundLayouts } from "../../../pages/404";
 

@@ -1,5 +1,5 @@
 import MobileMenu from "./mobile-menu";
-import { Logo } from "./Elements/Logo";
+import { Logo } from "./elements/logo";
 
 const Navbar: React.FC = () => {
   return (

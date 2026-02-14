@@ -1,6 +1,6 @@
 import { ClipboardListIcon } from "@heroicons/react/solid";
 import { Link } from "react-router-dom";
-import { MotionInView } from "../../Elements/Motion";
+import { MotionInView } from "../../elements/motion";
 
 const Resume = () => {
   return (

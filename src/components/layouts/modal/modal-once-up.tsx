@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Modal from "../../_ui/Modal";
-import { Image } from "../../Elements/Image";
+import { Image } from "../../elements/image";
 
 export const ModalOnceUp = () => {
   const [open, setOpen] = useState(false);
