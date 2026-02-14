@@ -10,18 +10,21 @@ import JSIcon from "../../../assets/icons/js.png";
 import { Image } from "../../Elements/Image";
 import { Motion } from "../../Elements/Motion";
 import { Highlighter } from "../../Elements/Highlighter";
+import { getProfileConfig } from "../../../utils/profile-config";
 import { MobileXs } from "../../../utils/screen";
 import { randomIntFromInterval } from "../../../utils";
 
 const styles = [a11yDark, obsidian, anOldHope];
 const style = styles[randomIntFromInterval(0, styles.length - 1)];
 function Hero() {
+  const profile = getProfileConfig();
+  const hobbyString = profile.hobby.map((h: string) => `"${h}"`).join(", ");
   const codeString = `const profile = {
-    name: "Raihan Arif Styawan",
-    age: 20,
-    title: "Web Developer",
-    hobby: ["Coding", "Gaming", "Anime"],
-    isMarried: false,
+    name: "${profile.name}",
+    age: ${profile.age},
+    title: "${profile.title}",
+    hobby: [${hobbyString}],
+    isMarried: ${profile.isMarried},
   };`;
   const [greeting] = useTypewriter({
     words: [
