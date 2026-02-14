@@ -67,7 +67,7 @@ const techStackData = [
   },
   {
     id: 13,
-    src: "https://seeklogo.com/images/J/jwt-logo-65D86B4640-seeklogo.com.png",
+    src: "https://static.cdnlogo.com/logos/j/20/jwt_thumb.png",
     title: "JWT",
   },
   {
@@ -82,7 +82,7 @@ const techStackData = [
   },
   {
     id: 16,
-    src: "https://seeklogo.com/images/J/jira-logo-FD39F795A7-seeklogo.com.png",
+    src: "https://static.cdnlogo.com/logos/j/28/jira.svg",
     title: "Jira",
   },
 ];

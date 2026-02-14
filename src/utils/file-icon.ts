@@ -28,7 +28,7 @@ const fileIcons: { [key: string]: string } = {
 const defaultFileIcons: { [key: string]: string } = {
   ["Update Log"]:
     "https://raw.githubusercontent.com/vscode-icons/vscode-icons/79c370141fe104b4bdc85a5c3d0e21f2a98b12d5/icons/default_file.svg",
-  ["MOKOMDO"]: "https://abangkuh.de/assets/mokomdo.png",
+  ["MOKOMDO"]: "https://abangkuh.netlify.app/assets/mokomdo.png",
   ["impact."]: "https://im-pact.netlify.app/favicon.ico",
 };
 

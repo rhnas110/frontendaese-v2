@@ -15,17 +15,17 @@ const WEB: {
   {
     title: "DNA News",
     url: "https://github.com/rhnas110/dna-news",
-    image: "https://abangkuh.de/assets/dnanews.png",
+    image: "https://abangkuh.netlify.app/assets/dnanews.png",
   },
   {
     title: "XPValor",
     url: "https://github.com/rhnas110/xpvalor",
-    image: "https://abangkuh.de/assets/xpvalor.png",
+    image: "https://abangkuh.netlify.app/assets/xpvalor.png",
   },
   {
     title: "motionime",
     url: "https://motionime.online/",
-    image: "https://abangkuh.de/assets/motionime.jpg",
+    image: "https://abangkuh.netlify.app/assets/motionime.jpg",
   },
   {
     title: "aese",
