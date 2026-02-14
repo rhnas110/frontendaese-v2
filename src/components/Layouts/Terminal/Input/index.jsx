@@ -4,7 +4,7 @@ import { shell } from "../../../../utils/shell";
 import { commandExists } from "../../../../utils/bin/command-exists";
 import { handleTabCompletion } from "../../../../utils/bin/tab-completion";
 
-import { Label } from "./label";
+import { Label } from "./Label";
 
 export const Input = ({
   inputRef,
@@ -54,11 +54,11 @@ export const Input = ({
         clearHistory,
         setCommand,
         setTerminalOpen,
-        addTab
+        addTab,
       );
       containerInputRef.current.scrollTo(
         0,
-        containerInputRef.current.scrollHeight
+        containerInputRef.current.scrollHeight,
       );
     }
 

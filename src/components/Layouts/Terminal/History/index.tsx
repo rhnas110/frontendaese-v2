@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { History as HistoryInterface } from "./interface";
-import { Label } from "../input/label";
+import { Label } from "../input/Label";
 
 export const History: FC<{ history: Array<HistoryInterface> }> = ({
   history,
