@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { SearchIcon } from "@heroicons/react/solid";
 
-import { Tooltip } from "./_ui/Tooltip";
+import { Tooltip } from "./_ui/tooltip";
 import { enterFullScreen, exitFullScreen } from "../utils/screen";
 
 export const Topbar = () => {

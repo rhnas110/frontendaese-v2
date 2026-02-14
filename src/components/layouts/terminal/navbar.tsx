@@ -1,4 +1,4 @@
-import { Tooltip } from "../../_ui/Tooltip";
+import { Tooltip } from "../../_ui/tooltip";
 import { XIcon } from "@heroicons/react/solid";
 
 export const Navbar = ({

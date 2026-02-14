@@ -8,7 +8,7 @@ import {
 
 import { SideNavItem } from "../types/menu";
 
-import { Tooltip } from "./_ui/Tooltip";
+import { Tooltip } from "./_ui/tooltip";
 import { Image } from "./elements/image";
 import { Social } from "./social";
 
