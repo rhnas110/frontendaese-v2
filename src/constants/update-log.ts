@@ -1,5 +1,14 @@
 export const updateLog = [
   {
+    version: "1.0.8",
+    description: "Bug Fixes and Enhancements.",
+    details: [
+      "Fix icons and images not render properly.",
+      "Add fullscreen utility support for better user experience.",
+      "Add topbar UI.",
+    ],
+  },
+  {
     version: "1.0.7",
     description: "Enhanced Terminal with new commands.",
     details: [
